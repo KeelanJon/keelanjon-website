@@ -1,0 +1,30 @@
+[
+{
+    "name": "Project 1",
+    "description": "This is my first project!",
+    "image": "./project-images/gatsby-astronaut.png",
+    "url": "https://example.com",
+    "slug": "project-one"
+    
+},
+{
+    "name": "Project 2",
+    "description": "This is my second project!",
+    "url": "https://example.com",
+    "slug": "project-two"
+    
+},
+{
+    "name": "Project 3",
+    "description": "This is my third project!",
+    "url": "https://example.com",
+    "slug": "project-three"
+}
+,
+{
+    "name": "Project 4",
+    "description": "This is my fourth project!",
+    "url": "https://example.com",
+    "slug": "project-four"
+}
+]
