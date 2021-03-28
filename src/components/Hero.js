@@ -82,7 +82,6 @@ const Container = styled.div`
   height: 100vh;
   width: 100%;
   background: none;
-  filter: invert(${props => (props.primary ? "0" : "1")});
   transition: 0.6s ease 0s;
   overflow: hidden;
 `

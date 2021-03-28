@@ -10,7 +10,18 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Inter', sans-serif;
     }
     body{
-        background: #131419;
+        background: ${props => props.theme.dark.primaryColor};
+    }
+    p{
+        font-weight: 300;
+        padding: 1.5rem 0;
+    }
+    h4{
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: .8rem;
+        letter-spacing: 1px;
+        padding: 1.5rem 0;
     }
 `
 

@@ -1,15 +1,17 @@
 /**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
+ *  The Layout component is used to wrap each page
+ *  providing the usual header, footer, default global styles
+ *  and access to the styled components theme options.
+ *  Please see the theme.js file inside the styled folder for theme
+ *  details.
  */
 
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import styled from "styled-components"
+import styled, { ThemeProvider } from "styled-components"
 
 import GlobalStyle from "../globalStyles"
+import Theme from "../styles/Theme"
 
 import Header from "./Header/Header"
 import CustomCursor from "./CustomCursor"
@@ -18,13 +20,15 @@ import Footer from "./Footer"
 const Layout = ({ children }) => {
   return (
     <LayoutContainer>
-      <GlobalStyle />
-      <CustomCursor />
-      <Header />
+      <Theme>
+        <GlobalStyle />
+        <CustomCursor />
+        <Header />
 
-      <StyledMain>{children}</StyledMain>
+        <StyledMain>{children}</StyledMain>
 
-      <Footer/>
+        <Footer />
+      </Theme>
     </LayoutContainer>
   )
 }

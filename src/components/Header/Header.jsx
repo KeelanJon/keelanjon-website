@@ -39,7 +39,7 @@ const NavContainer = styled.div`
   justify-content: space-between;
 
   background: none;
-  padding: 2rem;
+  padding: 3rem 5%;
 
   position: absolute;
   top: 0;

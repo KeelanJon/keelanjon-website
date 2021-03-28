@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { graphql } from "gatsby"
 
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import Img from "gatsby-image"
@@ -12,6 +12,7 @@ import AboutSection from "../components/AboutSection"
 import SectionWrapper from "../components/SectionWrapper"
 import WorkGallery from "../components/WorkGallery"
 import Contact from "../components/Contact"
+import NewHero from "../components/NewHero"
 
 function IndexPage({ data }) {
   //Stores the project object data returned from graphql query
@@ -32,7 +33,10 @@ function IndexPage({ data }) {
       <SEO title="Home" />
       {/* <Link to="/page-2/">Go to page 2</Link> <br />
       <Link to="/Blog/">BLOG</Link> */}
-      <Hero />
+      <NewHero />
+
+      {/* <Hero /> */}
+      <Link to="/portfolio">blog</Link>
       <AboutSection />
       <WorkGallery projectData={postData} />
       {/* <div>

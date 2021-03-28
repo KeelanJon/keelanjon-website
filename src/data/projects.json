@@ -4,15 +4,16 @@
     "description": "This is my first project!",
     "image": "./project-images/gatsby-astronaut.png",
     "url": "https://example.com",
-    "slug": "project-one"
-    
+    "slug": "/projects/projectone",
+    "challenge": "Challenge Text goes here",
+    "solution" : "Solution Text goes here",
+    "results": "Results text goes here"
 },
 {
     "name": "Project 2",
     "description": "This is my second project!",
     "url": "https://example.com",
     "slug": "project-two"
-    
 },
 {
     "name": "Project 3",
