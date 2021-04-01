@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import BackgroundCircle from "../components/BackgroundCircle"
@@ -9,7 +9,6 @@ import Contact from "../components/Contact"
 export default function BlogPost({ data }) {
   const post = data.markdownRemark.frontmatter
   const bannerImage = post.banner.childImageSharp.fluid
-  const bannerTwo = post.FeaturedImageTwo.childImageSharp.fluid
 
   return (
     <Layout>
@@ -58,60 +57,6 @@ export default function BlogPost({ data }) {
           </div>
         </TextSection>
       </Container>
-      <ParallaxSection>
-        <Img fluid={bannerTwo}></Img>
-      </ParallaxSection>
-      <Container>
-        <TextSection>
-          <div>
-            <h6>
-              <span>02.</span> What I did
-            </h6>
-          </div>
-          <div>
-            <h3>The Solution</h3>
-            <p>
-              I am practiced within a variety of technologies and currently
-              focus on React.Js to provide amazing user experiences, with
-              Gatsby.js for faster development and delivery I am practiced
-              within a variety of technologies and currently focus on React.Js
-              to provide amazing user experiences, with Gatsby.js for faster
-              development and delivery
-              {post.paragraphOne}
-            </p>
-          </div>
-        </TextSection>
-      </Container>
-      <ImageSliderContainer>
-        <SliderWrapper>
-          <StyledImg fluid={bannerImage} />
-        </SliderWrapper>
-      </ImageSliderContainer>
-      <Container>
-        <TextSection>
-          <div>
-            <h6>
-              <span>03.</span> How it went
-            </h6>
-          </div>
-          <div>
-            <h3>The Results</h3>
-            <p>
-              I am practiced within a variety of technologies and currently
-              focus on React.Js to provide amazing user experiences, with
-              Gatsby.js for faster development and delivery I am practiced
-              within a variety of technologies and currently focus on React.Js
-              to provide amazing user experiences, with Gatsby.js for faster
-              development and delivery
-              {post.paragraphOne}
-            </p>
-          </div>
-        </TextSection>
-      </Container>
-      <ParallaxSection>
-        <Img fluid={bannerTwo}></Img>
-      </ParallaxSection>
-      <Contact />
     </Layout>
   )
 }
@@ -132,13 +77,6 @@ export const query = graphql`
         paragraphOne
         paragraphTwo
         banner {
-          childImageSharp {
-            fluid(maxWidth: 1920) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        FeaturedImageTwo {
           childImageSharp {
             fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
