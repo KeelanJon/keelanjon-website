@@ -2,67 +2,62 @@ import React, { useState } from "react"
 import styled, { ThemeProvider, keyframes } from "styled-components"
 import { MdClear } from "react-icons/md"
 import { IoIosArrowForward } from "react-icons/io"
-import Theme from "../../styles/Theme"
 import VideoFeed from "../VideoFeed/VideoFeed"
 import Footer from "../Footer"
 import BackgroundCircle from "../BackgroundCircle"
 
 function Menu(props) {
   return (
-    <ThemeProvider theme={Theme}>
-      <MenuContainer open={props.MenuState}>
-        <BackgroundCircle top="80vh" left="-20vw" />
-        <BackgroundCircle top="-10vh" right="-20vw" />
-        <Navigation>
-          <MenuIcon
-            onClick={function () {
-              props.togglefunction()
-            }}
-          />
+    <MenuContainer open={props.MenuState}>
+      <Navigation>
+        <MenuIcon
+          onClick={function () {
+            props.togglefunction()
+          }}
+        />
 
-          <StyledGrid>
-            <StyledNav>
+        <StyledGrid>
+          <StyledNav>
+            <ul>
+              <li>
+                Home
+                <NavIcon />
+              </li>
+              <li>
+                About
+                <NavIcon />
+              </li>
+              <li>
+                Projects
+                <NavIcon />
+              </li>
+              <li>
+                Contact
+                <NavIcon />
+              </li>
+            </ul>
+          </StyledNav>
+          <LinksColumn>
+            <LinksContainer>
+              <h4>Socials</h4>
               <ul>
-                <li>
-                  Home
-                  <NavIcon />
-                </li>
-                <li>
-                  About
-                  <NavIcon />
-                </li>
-                <li>
-                  Projects
-                  <NavIcon />
-                </li>
-                <li>
-                  Contact
-                  <NavIcon />
-                </li>
+                <li>YouTube</li>
+                <li>Instagram</li>
+                <li>Twitter</li>
               </ul>
-            </StyledNav>
-            <LinksColumn>
-              <LinksContainer>
-                <h4>Socials</h4>
-                <ul>
-                  <li>Dribble</li>
-                  <li>Instagram</li>
-                  <li>Twitter</li>
-                </ul>
-              </LinksContainer>
-              <LinksContainer>
-                <h4>Contact Us</h4>
-                <ul>
-                  <li>info@keelsdesign.co.uk</li>
-                  <li>07476210620</li>
-                </ul>
-              </LinksContainer>
-            </LinksColumn>
-            <Footer />
-          </StyledGrid>
-        </Navigation>
-      </MenuContainer>
-    </ThemeProvider>
+            </LinksContainer>
+            <LinksContainer>
+              <h4>Contact</h4>
+              <ul>
+                <li>info@keelsdesign.co.uk</li>
+                <li>07476210620</li>
+              </ul>
+            </LinksContainer>
+          </LinksColumn>
+          <Footer />
+        </StyledGrid>
+      </Navigation>
+    </MenuContainer>
   )
 }
 
@@ -104,13 +99,12 @@ const MenuContainer = styled.div`
   z-index: 9;
   height: 100vh;
   width: 100vw;
-  background: ${props => props.theme.primaryColor};
+  background: ${props => props.theme.dark.primaryColor};
 `
 
 const Navigation = styled.div`
   position: relative;
   height: 100%;
-  padding: 1rem;
 `
 
 const MenuIcon = styled(MdClear)`
@@ -139,16 +133,15 @@ const StyledGrid = styled.div`
     height: 100%;
     width: 100%;
 
-    @media screen and (max-width: 640px) {
-      padding: 0vh 5vw;
+    @media screen and (max-width: ${props =>
+        props.theme.screenDimensions.mobile}) {
     }
   }
 
-  ${
-    "" /* @media screen and (max-width: ${props =>
+  @media screen and (max-width: ${props =>
       props.theme.screenDimensions.mobile}) {
     grid-template-columns: 1fr;
-  } */
+    background: red;
   }
 `
 
@@ -183,12 +176,10 @@ const NavIcon = styled(IoIosArrowForward)`
 const LinksColumn = styled.div`
   grid-column: 3/4;
 
-  ${
-    "" /* @media screen and (max-width: ${props =>
-      props.theme.screenDimensions.mobile}) {
-    grid-column: 1/2;
-    grid-row: 2/3;
-  } */
+  @media screen and (max-width: ${props =>
+    props.theme.screenDimensions.mobile}) {
+        display: none;
+  }
   }
 `
 

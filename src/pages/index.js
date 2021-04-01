@@ -9,6 +9,7 @@ import Img from "gatsby-image"
 
 import Hero from "../components/Hero"
 import AboutSection from "../components/AboutSection"
+import NewAboutSection from "../components/NewAboutSection"
 import SectionWrapper from "../components/SectionWrapper"
 import WorkGallery from "../components/WorkGallery"
 import Contact from "../components/Contact"
@@ -34,6 +35,7 @@ function IndexPage({ data }) {
       {/* <Link to="/page-2/">Go to page 2</Link> <br />
       <Link to="/Blog/">BLOG</Link> */}
       <NewHero />
+      <NewAboutSection />
 
       {/* <Hero /> */}
       <Link to="/portfolio">blog</Link>

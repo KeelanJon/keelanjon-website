@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
     p{
         font-weight: 300;
         padding: 1.5rem 0;
+        line-height: 2.2rem;
     }
     h4{
         text-transform: uppercase;

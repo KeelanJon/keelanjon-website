@@ -14,7 +14,7 @@ function NewHero(props) {
 
         <p>My name is Keelan. I am a Design, Developer and 3D Illustrator.</p>
         <PrimaryButton>Explore</PrimaryButton>
-        <SecondaryBtn>Download Resume</SecondaryBtn>
+        <SecondaryBtn>My Experience</SecondaryBtn>
       </ContentWrapper>
       <ImageColumn background={PersonalImage}>image</ImageColumn>
       <SocialBar />
@@ -43,6 +43,7 @@ const ImageColumn = styled.div`
   width: 100%;
 
   background-image: ${props => `url(${props.background})`};
+  background: blue;
   background-size: cover;
 `
 

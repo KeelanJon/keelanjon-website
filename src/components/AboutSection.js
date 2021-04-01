@@ -15,7 +15,6 @@ export default function AboutSection() {
 
         <p>Interested in lerning more?</p>
       </TextContainer>
-      <BackgroundCircle top="0vh" left="-20vw" />
     </AboutContainer>
   )
 }
