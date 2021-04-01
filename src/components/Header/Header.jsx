@@ -52,6 +52,15 @@ const NavContainer = styled.div`
   }
 `
 
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+`
+
 const Title = styled.div`
   font-size: 1rem;
   background: none;
@@ -65,13 +74,4 @@ const BurgerMenu = styled.div`
   font-weight: bold;
   cursor: pointer;
   background: none;
-`
-
-const rotate = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to{
-    transform: rotate(360deg);
-  }
 `
