@@ -39,7 +39,6 @@ function IndexPage({ data }) {
 
       {/* <Hero /> */}
       <Link to="/portfolio">blog</Link>
-      <AboutSection />
       <WorkGallery projectData={postData} />
       {/* <div>
         <h2>Blog</h2>
