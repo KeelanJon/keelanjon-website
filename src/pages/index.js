@@ -95,13 +95,6 @@ export const pageQuery = graphql`
               }
             }
           }
-          FeaturedImageTwo {
-            childImageSharp {
-              fluid(maxWidth: 1920) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
         }
         fields {
           slug
