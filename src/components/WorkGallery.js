@@ -9,7 +9,7 @@ function WorkGallery(props) {
   // console.log(projects)
 
   return (
-    <GalleryContainer id="MyWork">
+    <GalleryContainer id="projects">
       {projects.map(function (item) {
         return (
           <GalleryCard key={item.id}>
@@ -40,8 +40,9 @@ const GalleryContainer = styled.div`
   max-width: 1440px;
   margin: auto auto;
 
-  @media screen and (max-width: 600px) {
-    grid-template-columns: 1fr;
+  @media screen and (max-width: ${props =>
+      props.theme.screenDimensions.tablet}) {
+    grid-template-columns: 1fr !important;
   }
 `
 

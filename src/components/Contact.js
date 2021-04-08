@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 function Contact() {
   return (
-    <ContactContainer>
+    <ContactContainer id="contact">
       <h4>Let's work together</h4>
       <h2>info@keelsdesign.co.uk</h2>
     </ContactContainer>

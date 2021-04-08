@@ -12,7 +12,7 @@ import ServiceTwo from "../images/illustration-image.png"
 
 function Services({ data }) {
   return (
-    <Container>
+    <Container id="services">
       <Wrapper>
         <ServiceCard>
           {/* <Img fluid={data.file.childImageSharp.fluid} alt="" /> */}
@@ -22,7 +22,7 @@ function Services({ data }) {
             Promoting your business through the fantastic medium of the
             internet, I can design, prototype and develop your next project.
           </p>
-          <a href="#MyWork">
+          <a href="#projects">
             View Projects <BsArrowRightShort id="link-icon" />
           </a>
         </ServiceCard>
@@ -35,7 +35,7 @@ function Services({ data }) {
             your next project to life with beautiful 3D characters,
             illustrations and design.
           </p>
-          <a href="#MyWork">
+          <a href="#projects">
             View Projects <BsArrowRightShort id="link-icon" />
           </a>
         </ServiceCard>
@@ -69,11 +69,14 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 3rem;
 `
 const ServiceCard = styled.div`
   padding: 0;
   flex: 1;
+
+  &:nth-of-type(1) {
+    padding-right: 3rem;
+  }
 
   img {
     width: 100%;

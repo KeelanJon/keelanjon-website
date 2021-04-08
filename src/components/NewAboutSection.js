@@ -25,7 +25,7 @@ function About() {
           of made to. For, under sixth.
         </p>
 
-        <a href="#MyWork">Discover my Work</a>
+        <a href="#projects">Discover my Work</a>
       </div>
     </Container>
   )

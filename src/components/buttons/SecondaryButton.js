@@ -22,4 +22,9 @@ const SecondaryBtn = styled.button`
     background: ${props => props.theme.dark.secondaryColor};
     color: ${props => props.theme.dark.primaryColor};
   }
+
+  @media screen and (max-width: ${props =>
+      props.theme.screenDimensions.mobile}) {
+    padding: 1.2rem 1rem;
+  }
 `

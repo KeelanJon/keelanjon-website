@@ -28,13 +28,13 @@ function Hero(props) {
             My name is Keelan. I am a Design, Developer and 3D Illustrator.
           </p>
         </SlideInText>
-        <div>
+        <ButtonWrapper>
           <a href="#AboutMe">
             <PrimaryButton>Explore</PrimaryButton>
           </a>
 
           <SecondaryBtn>My Experience</SecondaryBtn>
-        </div>
+        </ButtonWrapper>
       </ContentWrapper>
 
       <ImageColumn>
@@ -50,20 +50,21 @@ export default Hero
 
 const HeroContainer = styled.div`
   position: relative;
-  height: 100vh;
+  ${"" /* height: 100vh; */}
   display: flex;
   align-items: center;
   background: ${props => props.theme.dark.primaryColor};
 
   @media screen and (max-width: ${props =>
       props.theme.screenDimensions.tablet}) {
-    flex-direction: column;
-    height: 100vh;
+    ${"" /* flex-direction: column; */}
+    ${"" /* height: 100vh; */}
   }
 
   @media screen and (max-width: ${props =>
       props.theme.screenDimensions.mobile}) {
-    height: 100%;
+    ${"" /* height: 100vh; */}
+    flex-direction: column;
   }
 `
 
@@ -80,6 +81,16 @@ const ContentWrapper = styled.div`
 
     padding: 20% 0;
   }
+
+  @media screen and (max-width: ${props =>
+      props.theme.screenDimensions.mobile}) {
+    padding: 20vh 0;
+  }
+`
+
+const ButtonWrapper = styled.div`
+  display: flex;
+  width: 100%;
 `
 
 const ImageColumn = styled.div`
@@ -101,10 +112,19 @@ const ImageColumn = styled.div`
     img {
       object-position: center;
     }
+
+    @media screen and (max-width: ${props =>
+        props.theme.screenDimensions.mobile}) {
+    }
   }
 `
 
 const Title = styled.h1`
   color: ${props => props.theme.dark.secondaryColor};
   font-size: ${props => props.theme.fontSizes.large};
+
+  @media screen and (max-width: ${props =>
+      props.theme.screenDimensions.mobile}) {
+    font-size: 1.8rem;
+  }
 `

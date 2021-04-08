@@ -8,8 +8,7 @@ export default function Footer() {
         marginTop: `2rem`,
       }}
     >
-      © {new Date().getFullYear()} Website by Keelan Jonathan | Made with Sweat
-      Love & Gatsby
+      © {new Date().getFullYear()} Website by Keelan Jonathan
     </StyledFooter>
   )
 }

@@ -20,4 +20,9 @@ const PrimaryBtn = styled.button`
   &:hover {
     filter: invert(1);
   }
+
+  @media screen and (max-width: ${props =>
+      props.theme.screenDimensions.mobile}) {
+    padding: 1.2rem 2rem;
+  }
 `
