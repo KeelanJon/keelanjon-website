@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { BsArrowRightShort } from "react-icons/Bs"
+import { BsArrowRightShort } from "react-icons/bs"
 import SocialCardBG from "../images/skillcard.png"
 import SocialCardBG2 from "../images/skillcard2.png"
 import DevImage from "../images/dev-image.png"
