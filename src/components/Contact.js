@@ -13,7 +13,7 @@ function Contact() {
 export default Contact
 
 const ContactContainer = styled.div`
-  padding: 10% 5vh;
+  padding: 10% 0;
 
   h2 {
     font-size: 4rem;

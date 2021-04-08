@@ -35,11 +35,21 @@ const CursorContainer = styled.div`
   z-index: 1000;
   width: 60px;
   height: 60px;
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 50%;
   pointer-events: none;
   overflow: hidden;
   transform: translate(-50%, -50%);
   background: none;
   transition: 0.03s ease 0s;
+
+  @media screen and (max-width: ${props =>
+      props.theme.screenDimensions.tablet}) {
+    display: none;
+  }
+
+  @media screen and (max-width: ${props =>
+      props.theme.screenDimensions.mobile}) {
+    display: none;
+  }
 `

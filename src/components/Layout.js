@@ -42,6 +42,9 @@ const FooterContainer = styled.footer`
 
 const LayoutContainer = styled.div`
   overflow: hidden;
+  padding: 0% 10%;
+  max-width: 1920px;
+  margin: auto auto;
 `
 const StyledMain = styled.main`
   overflow: hidden;

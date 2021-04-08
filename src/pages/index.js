@@ -7,13 +7,16 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import Img from "gatsby-image"
 
-import Hero from "../components/Hero"
 import AboutSection from "../components/AboutSection"
 import NewAboutSection from "../components/NewAboutSection"
 import SectionWrapper from "../components/SectionWrapper"
 import WorkGallery from "../components/WorkGallery"
 import Contact from "../components/Contact"
-import NewHero from "../components/NewHero"
+import Hero from "../components/Hero"
+import SlideInText from "../components/SlideInText"
+import ChoiceSection from "../components/ChoiceSection"
+import ClientsSection from "../components/ClientsSection"
+import Services from "../components/Services"
 
 function IndexPage({ data }) {
   //Stores the project object data returned from graphql query
@@ -21,41 +24,19 @@ function IndexPage({ data }) {
   let projectData = data.allProjectsJson.nodes
   let projects = []
   let postData = data.allMarkdownRemark.nodes
-  // console.log(projects)
 
   projectData.map(function (item, index) {
     projects.push(item)
   })
 
-  // console.log(postData)
-
   return (
     <Layout>
       <SEO title="Home" />
-      {/* <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/Blog/">BLOG</Link> */}
-      <NewHero />
+      <Hero />
       <NewAboutSection />
 
-      {/* <Hero /> */}
-      <Link to="/portfolio">blog</Link>
-      <WorkGallery projectData={postData} />
-      {/* <div>
-        <h2>Blog</h2>
-        {postData.map(function (item, index) {
-          return (
-            <div key={index} style={{ padding: "1rem" }}>
-              <img
-                src={item.frontmatter.banner.childImageSharp.fluid.src}
-              ></img>
-              <p>{item.frontmatter.date}</p>
-              <h3>{item.frontmatter.title}</h3>
-              <p>{item.excerpt}</p>
-              <Link to={item.fields.slug}>Read More</Link>
-            </div>
-          )
-        })}
-      </div> */}
+      <Services />
+      <WorkGallery projectData={projects} />
       <Contact />
     </Layout>
   )
@@ -74,10 +55,21 @@ export const pageQuery = graphql`
 
     allProjectsJson {
       nodes {
-        description
-        name
+        id
+        author
+        title
+        category
+        slug
+        image {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
+
     allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
       nodes {
         id

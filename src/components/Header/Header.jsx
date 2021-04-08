@@ -41,7 +41,7 @@ const NavContainer = styled.div`
   background: none;
   padding: 3rem 5%;
 
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -52,22 +52,18 @@ const NavContainer = styled.div`
   }
 `
 
-const rotate = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to{
-    transform: rotate(360deg);
-  }
-`
-
 const Title = styled.div`
   font-size: 1rem;
   background: none;
-  animation: ${rotate} 2s ease-in infinite;
+
+  transition: 0.3s ease 0s;
 
   & > * {
     background: none;
+  }
+
+  &:hover {
+    transform: translateX(20%);
   }
 `
 const BurgerMenu = styled.div`

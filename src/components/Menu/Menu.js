@@ -63,43 +63,19 @@ function Menu(props) {
 
 export default Menu
 
-function slideInUp() {
-  return keyframes`
-  
-    0%{
-      transform: translateY(100%);
-      opacity: 0;
-    }
-    100%{
-      transform: translateY(0%);
-      opacity: 
-    }
-  `
-}
-
-function menuAnimation() {
-  return keyframes`
-    0%{
-      height: 0%;
-      overflow: hidden;
-    }
-    100%{
-      height: 100%;
- 
-    }
-
-  `
-}
-
 const MenuContainer = styled.div`
   position: fixed;
-  display: ${props => (props.open ? "inline" : "none")};
+  ${"" /* display: ${props => (props.open ? "inline" : "none")}; */}
+  display: inline;
   top: 0;
   left: 0;
+  transform: ${props => (props.open ? "translateY(0)" : "translateY(-100%)")};
   z-index: 9;
   height: 100vh;
   width: 100vw;
   background: ${props => props.theme.dark.primaryColor};
+  transition: 0.6s ease-out 0s;
+  overflow: hidden;
 `
 
 const Navigation = styled.div`
@@ -141,7 +117,6 @@ const StyledGrid = styled.div`
   @media screen and (max-width: ${props =>
       props.theme.screenDimensions.mobile}) {
     grid-template-columns: 1fr;
-    background: red;
   }
 `
 

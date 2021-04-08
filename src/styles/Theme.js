@@ -17,11 +17,12 @@ const theme = {
     small: ".865rem",
     medium: "2rem",
     large: "3.8vw",
+    bodyText: "1.2rem",
   },
   screenDimensions: {
-    mobile: "640px",
-    tablet: "962px",
-    desktop: "1024px",
+    mobile: "720px",
+    tablet: "1280px",
+    desktop: "1440px",
   },
 }
 

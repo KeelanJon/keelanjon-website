@@ -6,22 +6,20 @@ import { Link } from "gatsby"
 function WorkGallery(props) {
   const projects = props.projectData
 
-  console.log(projects)
+  // console.log(projects)
 
   return (
-    <GalleryContainer>
+    <GalleryContainer id="MyWork">
       {projects.map(function (item) {
         return (
           <GalleryCard key={item.id}>
-            <Link to={item.fields.slug}>
+            <Link to={item.slug}>
               <ImageContainer>
-                <FeaturedImage
-                  fluid={item.frontmatter.banner.childImageSharp.fluid}
-                />
+                <FeaturedImage fluid={item.image.childImageSharp.fluid} />
               </ImageContainer>
               <CardText>
-                <Category>{item.frontmatter.category}</Category>
-                <ProjectTitle>{item.frontmatter.title}</ProjectTitle>
+                <Category>{item.category}</Category>
+                <ProjectTitle>{item.title}</ProjectTitle>
               </CardText>
             </Link>
           </GalleryCard>
@@ -34,7 +32,7 @@ function WorkGallery(props) {
 export default WorkGallery
 
 const GalleryContainer = styled.div`
-  padding: 5% 5%;
+  padding: 5% 0%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;

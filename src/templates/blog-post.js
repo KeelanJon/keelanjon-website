@@ -151,7 +151,10 @@ const InfoBox = styled.div`
 
   h4 {
     font-size: 1.5rem;
+    text-transform: lowercase;
+    text-transform: capitalize;
     line-height: 1.8;
+    font-weight: 700;
   }
 
   p {

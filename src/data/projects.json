@@ -1,31 +1,39 @@
 [
 {
-    "name": "Project 1",
+    "title": "Project 1",
     "description": "This is my first project!",
     "image": "./project-images/gatsby-astronaut.png",
     "url": "https://example.com",
     "slug": "/projects/projectone",
-    "challenge": "Challenge Text goes here",
-    "solution" : "Solution Text goes here",
-    "results": "Results text goes here"
+    "author": "Keelan Jonathan",
+    "category": "Web Development"
 },
 {
-    "name": "Project 2",
+    "title": "Project 2",
     "description": "This is my second project!",
+    "image": "./project-images/gatsby-astronaut.png",
     "url": "https://example.com",
-    "slug": "project-two"
+    "slug": "project-two",
+    "author": "Keelan Jonathan",
+    "category": "Web Development"
 },
 {
-    "name": "Project 3",
-    "description": "This is my third project!",
-    "url": "https://example.com",
-    "slug": "project-three"
+    "title": "Lets Talk Ments Mental Health",
+    "description": "A website design and development project",
+    "image": "./project-images/gatsby-astronaut.png",
+    "url": "https://letstalk.org.uk",
+    "slug": "/projects/letstalk-project/",
+    "author": "Keelan Jonathan",
+    "category": "Web Design, Web Development"
 }
 ,
 {
-    "name": "Project 4",
+    "title": "Project 4",
     "description": "This is my fourth project!",
+    "image": "./project-images/gatsby-astronaut.png",
     "url": "https://example.com",
-    "slug": "project-four"
+    "slug": "project-four",
+    "author": "Keelan Jonathan",
+    "category": "Web Development"
 }
 ]
