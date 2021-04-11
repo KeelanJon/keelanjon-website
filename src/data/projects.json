@@ -1,39 +1,56 @@
 [
 {
-    "title": "Project 1",
-    "description": "This is my first project!",
-    "image": "./project-images/gatsby-astronaut.png",
-    "url": "https://example.com",
-    "slug": "/projects/projectone",
-    "author": "Keelan Jonathan",
-    "category": "Web Development"
-},
-{
-    "title": "Project 2",
-    "description": "This is my second project!",
-    "image": "./project-images/gatsby-astronaut.png",
-    "url": "https://example.com",
-    "slug": "project-two",
-    "author": "Keelan Jonathan",
-    "category": "Web Development"
-},
-{
     "title": "Lets Talk Ments Mental Health",
     "description": "A website design and development project",
-    "image": "./project-images/gatsby-astronaut.png",
+    "image": "../images/ltmmh-thumbnail.png",
+    "featured-image": "../images/ltmmh-featured-image.png",
+    "galleryImages" : ["1", "2", "3", "4"],
     "url": "https://letstalk.org.uk",
     "slug": "/projects/letstalk-project/",
     "author": "Keelan Jonathan",
-    "category": "Web Design, Web Development"
-}
-,
+    "category": "Web Design, Web Development",
+    "technology": "WordPress, Divi Theme",
+    "date": "06 April 2021"
+},
 {
-    "title": "Project 4",
-    "description": "This is my fourth project!",
-    "image": "./project-images/gatsby-astronaut.png",
+    "title": "3D UI/UX Web Illustration Pack",
+    "description": "This is my first project!",
+    "image": "../images/ltmmh-thumbnail.png",
+    "featured-image": "../images/ltmmh-featured-image.png",
+    "galleryImages" : ["1", "2", "3", "4"],
     "url": "https://example.com",
-    "slug": "project-four",
+    "slug": "/projects/3d-illustration-pack-one/",
     "author": "Keelan Jonathan",
-    "category": "Web Development"
+    "category": "Web Design, 3D illustration",
+    "technology": "Blender, Figma",
+    "date": "06 April 2021"
+},
+{
+    "title": "Keelan Jon Portfolio Website",
+    "description": "This is a custom built website by Keelan Jon to showcase web development projects",
+    "image": "./project-images/gatsby-astronaut.png",
+    "featured-image": "../images/ltmmh-featured-image.png",
+    "galleryImages" : ["1", "2", "3", "4"],
+    "url": "https://example.com",
+    "slug": "",
+    "author": "Keelan Jonathan",
+    "category": "Web Development",
+    "technology": "WordPress, Divi Theme",
+    "date": "06 April 2021"
+},
+
+
+{
+    "title": "Wales Environment Link Website",
+    "description": "A project developed with Wales Environment Link from Keelan Jon",
+    "image": "./project-images/gatsby-astronaut.png",
+    "featuredImage": "../images/ltmmh-featured-image.png",
+    "galleryImages" : ["1", "2", "3", "4"],
+    "url": "https://waleslink.org",
+    "slug": "",
+    "author": "Keelan Jonathan",
+    "category": "Web Development",
+    "technology": "WordPress, Divi Theme",
+    "date": "23 March 2021"
 }
 ]

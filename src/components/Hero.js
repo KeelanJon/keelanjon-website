@@ -33,7 +33,7 @@ function Hero(props) {
             <PrimaryButton>Explore</PrimaryButton>
           </a>
 
-          <SecondaryBtn>My Experience</SecondaryBtn>
+          <SecondaryBtn>My Work</SecondaryBtn>
         </ButtonWrapper>
       </ContentWrapper>
 

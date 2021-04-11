@@ -1,12 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import Layout from "../../components/Layout"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 //image Imports
 import HeaderImage from "../../data/project-images/letstalk-featured-image.png"
 
-function letstalkProject(props) {
+function letstalkProject({ data }) {
   return (
     <Layout>
       <Header>
@@ -55,6 +55,10 @@ function letstalkProject(props) {
 }
 
 export default letstalkProject
+
+//Graphql queries here!
+
+//Styled components begin here!
 
 const Header = styled.section`
   padding: 30vh 0;

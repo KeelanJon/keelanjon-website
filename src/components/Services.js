@@ -16,7 +16,10 @@ function Services({ data }) {
       <Wrapper>
         <ServiceCard>
           {/* <Img fluid={data.file.childImageSharp.fluid} alt="" /> */}
-          <img src={ServiceOne} />
+          <CardImage>
+            <img src={ServiceOne} />
+          </CardImage>
+
           <h2>Design & Development</h2>
           <p>
             Promoting your business through the fantastic medium of the
@@ -28,7 +31,10 @@ function Services({ data }) {
         </ServiceCard>
         <ServiceCard>
           {/* <Img fluid={data.file.childImageSharp.fluid} alt="" /> */}
-          <img src={ServiceTwo} alt="service image" />
+          <CardImage>
+            <img src={ServiceTwo} alt="service image" />
+          </CardImage>
+
           <h2>3D illustration</h2>
           <p>
             3D design and virtual reality is the new frontier for 2021. Bring
@@ -69,18 +75,27 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width: ${props =>
+      props.theme.screenDimensions.mobile}) {
+    flex-direction: column;
+  }
 `
 const ServiceCard = styled.div`
   padding: 0;
   flex: 1;
 
+  /*Here padding has been added to first service card alone
+    as the "gap" property doesn't seems to work in some browsers */
   &:nth-of-type(1) {
     padding-right: 3rem;
-  }
 
-  img {
-    width: 100%;
-    object-fit: cover;
+    /* Padding removed on stacked mobile view */
+    @media screen and (max-width: ${props =>
+        props.theme.screenDimensions.mobile}) {
+      padding: 0;
+      padding-bottom: 3em;
+    }
   }
 
   h2 {
@@ -113,5 +128,25 @@ const ServiceCard = styled.div`
     #link-icon {
       font-size: 1.5rem;
     }
+  }
+`
+
+const CardImage = styled.div`
+  height: 30vh;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 25% 10%;
+
+    @media screen and (max-width: ${props =>
+        props.theme.screenDimensions.mobile}) {
+    }
+  }
+
+  @media screen and (max-width: ${props =>
+      props.theme.screenDimensions.tablet}) {
+    height: 20vh;
   }
 `
