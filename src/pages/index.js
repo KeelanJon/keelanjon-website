@@ -14,8 +14,6 @@ import WorkGallery from "../components/WorkGallery"
 import Contact from "../components/Contact"
 import Hero from "../components/Hero"
 import SlideInText from "../components/SlideInText"
-import ChoiceSection from "../components/ChoiceSection"
-import ClientsSection from "../components/ClientsSection"
 import Services from "../components/Services"
 
 function IndexPage({ data }) {

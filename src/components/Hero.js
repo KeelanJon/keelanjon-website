@@ -33,7 +33,9 @@ function Hero(props) {
             <PrimaryButton>Explore</PrimaryButton>
           </a>
 
-          <SecondaryBtn>My Work</SecondaryBtn>
+          <a href="#projects">
+            <SecondaryBtn>My Work</SecondaryBtn>
+          </a>
         </ButtonWrapper>
       </ContentWrapper>
 

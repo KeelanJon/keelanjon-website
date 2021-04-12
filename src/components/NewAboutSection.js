@@ -13,16 +13,18 @@ function About() {
 
       <div>
         <p>
-          Fifth had Grass called rule light. Can’t under can’t. Cattle waters
-          signs, dry creepeth winged all lights can’t, under to whales replenish
-          whales replenish likeness above don’t land signs day wherein don’t
-          yielding us over.
+          Web Design & Developer based near Cardiff, South Wales UK. I run a
+          small web design business under the name KeelsDesign, where I work
+          with local businesses across Wales to help grow their online presence.
         </p>
         <br></br>
         <p>
-          To wherein open man fish saw. Forth beginning a subdue whales. Male.
-          Saying blessed whose, meat saw. Divided in lesser creeping open bring
-          of made to. For, under sixth.
+          In my spare time, I like to create 3D art, practice my coding skills,
+          drink lots of coffee and getting lost in a good movie. I also enjoying
+          going to the gym and creating educational content on my{" "}
+          <a href="https://www.youtube.com/channel/UCsx6kQZt0y3Ie5ob_cwQ5cQ">
+            YouTube channel
+          </a>
         </p>
 
         <a href="#projects">Discover my Work</a>

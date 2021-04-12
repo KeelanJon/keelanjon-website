@@ -81,14 +81,14 @@ function Menu(props) {
 export default Menu
 
 const MenuContainer = styled.div`
-  position: fixed; 
+  position: fixed;
   top: 0;
   left: 0;
- 
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
- 
+
   transform: ${props => (props.open ? "translateY(0)" : "translateY(-100%)")};
 
   z-index: 9;
@@ -101,8 +101,8 @@ const MenuContainer = styled.div`
   padding-bottom: 2rem;
 
   @media screen and (max-width: ${props =>
-    props.theme.screenDimensions.mobile}) {
-    padding: 2rem;s
+      props.theme.screenDimensions.mobile}) {
+    padding: 3rem;
   }
 `
 
@@ -114,7 +114,7 @@ const MenuIcon = styled(MdClear)`
   position: absolute;
   top: 5%;
   right: 5%;
-  font-size: 2rem;
+  font-size: 2.5rem;
   background: none;
   cursor: pointer;
   transition: 0.3s ease 0s;
@@ -126,10 +126,23 @@ const MenuIcon = styled(MdClear)`
   &:active {
     transform: scale(1.2);
   }
+
+  @media screen and (max-width: ${props =>
+      props.theme.screenDimensions.mobile}) {
+    top: 2%;
+    right: 2%;
+  }
 `
 
 const StyledGrid = styled.div`
-  display: grid;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  @media screen and (max-width: ${props =>
+      props.theme.screenDimensions.mobile}) {
+    flex-direction: column;
+  }
 `
 
 //Navigation link container element
@@ -165,17 +178,22 @@ const NavIcon = styled(IoIosArrowForward)`
 `
 
 const LinksColumn = styled.div`
-  grid-column: 3/4;
+ 
 
   @media screen and (max-width: ${props =>
     props.theme.screenDimensions.mobile}) {
-        display: none;
+        ${"" /* display: none; */}
   }
   }
 `
 
 const LinksContainer = styled.div`
   padding-bottom: 5rem;
+
+  @media screen and (max-width: ${props =>
+      props.theme.screenDimensions.mobile}) {
+    padding-bottom: 2rem;
+  }
 
   li,
   ul {

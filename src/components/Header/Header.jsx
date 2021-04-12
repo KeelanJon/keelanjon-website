@@ -50,6 +50,11 @@ const NavContainer = styled.div`
   & > * {
     text-decoration: none;
   }
+
+  @media screen and (max-width: ${props =>
+      props.theme.screenDimensions.tablet}) {
+    padding: 1rem 10%;
+  }
 `
 
 const Title = styled.div`

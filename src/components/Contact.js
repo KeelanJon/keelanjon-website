@@ -4,8 +4,12 @@ import styled from "styled-components"
 function Contact() {
   return (
     <ContactContainer id="contact">
-      <h4>Let's work together</h4>
+      {/* <h4>Let's work together</h4> */}
       <h2>info@keelsdesign.co.uk</h2>
+      <p>
+        I’m available for freelance projects or for hire. Let’s work together on
+        your next project.
+      </p>
     </ContactContainer>
   )
 }
@@ -13,10 +17,21 @@ function Contact() {
 export default Contact
 
 const ContactContainer = styled.div`
-  padding: 10% 0;
+  padding: 20vh 0;
+
+  @media screen and (max-width: ${props =>
+      props.theme.screenDimensions.tablet}) {
+    padding: 10vh 0;
+  }
 
   h2 {
-    font-size: 4rem;
+    font-size: 5vh;
+    font-weight: 500;
+
+    @media screen and (max-width: ${props =>
+        props.theme.screenDimensions.mobile}) {
+      font-size: 1.5rem;
+    }
   }
 
   h4 {

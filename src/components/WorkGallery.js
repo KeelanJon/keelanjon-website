@@ -59,6 +59,17 @@ const ProjectTitle = styled.h3`
 
 const CardText = styled.div`
   transition: 0.3s ease 0s;
+  max-width: 60%;
+
+  @media screen and (max-width: ${props =>
+      props.theme.screenDimensions.tablet}) {
+    max-width: 60%;
+  }
+
+  @media screen and (max-width: ${props =>
+      props.theme.screenDimensions.mobile}) {
+    max-width: 80%;
+  }
 `
 
 const GalleryCard = styled.div`

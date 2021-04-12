@@ -2,54 +2,67 @@ import React from "react"
 import styled from "styled-components"
 import Layout from "../../components/Layout"
 import { Link, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 //image Imports
 import HeaderImage from "../../data/project-images/letstalk-featured-image.png"
+import ProjectGallery from "../../components/ProjectGallery"
 
 function letstalkProject({ data }) {
+  const projectInfo = data.allProjectsJson.edges[0].node
+
   return (
     <Layout>
+      {console.log(projectInfo)}
       <Header>
-        <h1>Lets Talk Mens Mental Health</h1>
-        <Link to="#overview">Discover</Link>
+        <h1>{projectInfo.title}</h1>
+        <p>
+          Let’s Talk Mens Mental health are a non for profit community interest
+          organisation established to make a <span>difference</span> in the
+          stigma around <span>mens mental health.</span>
+        </p>
+        <Link to="https://letstalk.keelsdesign.co.uk/">Live Website</Link>
       </Header>
       <DetailsSection id="overview">
         <DetailCard>
           <h3>Author</h3>
-          <p>Keelan Jonathan</p>
+          <p>{projectInfo.author}</p>
         </DetailCard>
         <DetailCard>
           <h3>Date</h3>
-          <p>06 Apr 2021</p>
+          <p>{projectInfo.date}</p>
         </DetailCard>
         <DetailCard>
           <h3>Category</h3>
-          <p>Design, WordPress</p>
+          <p>{projectInfo.category}</p>
         </DetailCard>
         <DetailCard>
           <h3>Technology</h3>
-          <p>WordPress, Divi Theme</p>
+          <p>{projectInfo.technology}</p>
         </DetailCard>
       </DetailsSection>
       <FeaturedImage>
-        <img src={HeaderImage} />
+        {/* <img src={projectInfo.FeaturedImage.childrenImageSharp.fluid} /> */}
+        <Img fluid={projectInfo.featuredImage.childImageSharp.fluid} />
       </FeaturedImage>
       <TextArea>
         <div>
-          <h4>01/ How it started</h4>
+          <h4>Overview</h4>
         </div>
         <div>
+          <h2>Deliverables</h2>
           <p>
-            <h2>The Challenge</h2>
-            Let’s Talk Mens Mental health are a non for profit community
-            interest organisation established to make a difference in the stigma
-            around mens mental health. They approached me to help design and
-            develop a modern website for their organisation, provide an online
-            store platform that links with Printful for dynamic purchase and
-            shipping, and with their integrate their podcast stream.
+            Let’s Talk required a complete website design and development
+            project, created with a <span>dark theme</span> matching their
+            branding, along with key deliverables including an{" "}
+            <span>online store</span>, <span>Printful </span>
+            integration and a live stream for their Breaking the Stigma{" "}
+            <span>podcast</span>.
           </p>
         </div>
       </TextArea>
+
+      <ProjectGallery imageData={projectInfo} />
     </Layout>
   )
 }
@@ -58,23 +71,80 @@ export default letstalkProject
 
 //Graphql queries here!
 
+export const ProjectData = graphql`
+  query ProjectQuery {
+    allProjectsJson(filter: { slug: { eq: "/projects/letstalk-project/" } }) {
+      edges {
+        node {
+          id
+          title
+          author
+          category
+          date
+          description
+          technology
+          galleryImages {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          featuredImage {
+            childImageSharp {
+              fluid(maxWidth: 1920) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
+
 //Styled components begin here!
 
 const Header = styled.section`
-  padding: 30vh 0;
+  padding: 20vh 0;
 
   h1 {
-    font-size: 6vw;
+    font-size: 5vw;
     max-width: 800px;
     margin-bottom: 3rem;
+
+    @media screen and (max-width: ${props =>
+        props.theme.screenDimensions.tablet}) {
+      font-size: 5rem;
+    }
+
+    @media screen and (max-width: ${props =>
+        props.theme.screenDimensions.mobile}) {
+      font-size: 2.5rem;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    max-width: 700px;
+    font-weight: 300;
+
+    span {
+      font-weight: 700;
+    }
+
+    @media screen and (max-width: ${props =>
+        props.theme.screenDimensions.tablet}) {
+      text-align: justify;
+    }
   }
 
   a {
     text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 300;
+    font-size: 1rem;
+    font-weight: 700;
 
-    margin: 1rem 0;
+    margin: 2rem 0;
     transition: 0.3s ease 0s;
     &:hover {
       padding-left: 1rem;
@@ -85,10 +155,13 @@ const DetailsSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-wrap: wrap;
   padding: 5vh 0;
+  width: 100%;
 `
 const DetailCard = styled.div`
   padding-right: 5rem;
+  padding-bottom: 3rem;
 
   h3 {
     font-size: 2.5rem;
@@ -111,11 +184,20 @@ const TextArea = styled.div`
 
   h2 {
     font-size: ${props => props.theme.fontSizes.medium};
-    padding-bottom: 1rem;
+    padding: 1.5rem 0;
   }
 
   div {
     flex: 1;
+  }
+
+  span {
+    font-weight: 500;
+  }
+
+  @media screen and (max-width: ${props =>
+      props.theme.screenDimensions.tablet}) {
+    flex-direction: column;
   }
 `
 const FullWidthImage = styled.div``
