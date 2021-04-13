@@ -17,11 +17,11 @@ function waleslinkProject({ data }) {
       <Header>
         <h1>{projectInfo.title}</h1>
         <p>
-          Let’s Talk Mens Mental health are a non for profit community interest
-          organisation established to make a <span>difference</span> in the
-          stigma around <span>mens mental health.</span>
+          Wales Environment Link (WEL) is a network of environmental,
+          countryside and heritage non-governmental organisations working across
+          Wales since 1990.
         </p>
-        <Link to="https://letstalk.keelsdesign.co.uk/">Live Website</Link>
+        <Link to="https://waleslink.org">Live Website</Link>
       </Header>
       <DetailsSection id="overview">
         <DetailCard>
