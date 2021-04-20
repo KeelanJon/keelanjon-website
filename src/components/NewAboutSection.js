@@ -39,7 +39,7 @@ const Container = styled.div`
   display: flex;
 
   text-align: left;
-  padding: 10% 0%;
+  padding: 25% 0%;
   background: #0e0e16;
   color: #f5f5f5;
 

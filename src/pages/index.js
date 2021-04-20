@@ -15,6 +15,7 @@ import Contact from "../components/Contact"
 import Hero from "../components/Hero"
 import SlideInText from "../components/SlideInText"
 import Services from "../components/Services"
+import PersonalProjects from "../components/PersonalProjects"
 
 function IndexPage({ data }) {
   //Stores the project object data returned from graphql query
@@ -32,9 +33,9 @@ function IndexPage({ data }) {
       <SEO title="Home" />
       <Hero />
       <NewAboutSection />
-
       <Services />
       <WorkGallery projectData={projects} />
+      <PersonalProjects />
       <Contact />
     </Layout>
   )
