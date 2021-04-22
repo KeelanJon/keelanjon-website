@@ -3,6 +3,8 @@ import styled from "styled-components"
 
 //image imports
 import TaskAppImage from "../images/taskapp-thumbnail.png"
+import quizappImage from "../images/quizapp-thumbnail.png"
+import websiteImage from "../images/personalwebsite-thumbnail.png"
 
 function PersonalProjects() {
   return (
@@ -23,9 +25,21 @@ function PersonalProjects() {
           </a>
         </StyledCard>
         <StyledCard>
-          <h5>Javascript Quiz</h5>
-          <p>Think you have what it takes to pass the JavaScript quiz?</p>
-          <img src={TaskAppImage} />
+          <a href="https://github.com/KeelanJon/javascript-quizapp">
+            <h5>Javascript Quiz</h5>
+            <p>Think you have what it takes to pass the JavaScript quiz?</p>
+            <img src={quizappImage} />{" "}
+          </a>
+        </StyledCard>
+        <StyledCard>
+          <a href="https://github.com/KeelanJon/keelanjon-website">
+            <h5>Personal Website</h5>
+            <p>
+              This is my new developer website built with React and Gatsby, hey
+              you're currently on it!
+            </p>
+            <img src={websiteImage} />{" "}
+          </a>
         </StyledCard>
       </CardWrapper>
     </Container>
