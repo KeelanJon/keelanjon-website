@@ -1,7 +1,7 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 
 <h1 align="center">
-  Keelan Jonathan - Gatsby Website
+  Keelan Jonathan - Peronal Website
 </h1>
 
 Hey welcome to the KeelanJon website repository, this is a website I built with
@@ -13,10 +13,10 @@ Feel free to download and play around with this should you be interested...
 
 ## 🚀 Built with
 
-**HTML/CSS**
-**React**
-**Gatsby**
-**Styled Components**
+**HTML/CSS,**
+**React,**
+**Gatsby,**
+**Styled Components,**
 **Netlify**
 
 ## 🎓 For more information

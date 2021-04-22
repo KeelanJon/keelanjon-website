@@ -4,14 +4,27 @@ import styled from "styled-components"
 function About() {
   return (
     <Container id="AboutMe">
-      <div>
+      <div
+        data-sal="slide-up"
+        data-sal-delay="300"
+        data-sal-easing="ease"
+        data-sal-duration="600"
+        once="false"
+        data-sal-repeat="true"
+        sal={{ once: true, threshold: 1 }}
+      >
         <h2>
           Designer, Developer and 3D Illustrator. Bringing your Digital World to
           Life
         </h2>
       </div>
 
-      <div>
+      <div
+        data-sal="slide-up"
+        data-sal-delay="300"
+        data-sal-easing="ease"
+        data-sal-duration="900"
+      >
         <p>
           Web Design & Developer based near Cardiff, South Wales UK. I run a
           small web design business under the name KeelsDesign, where I work
@@ -40,6 +53,7 @@ const Container = styled.div`
 
   text-align: left;
   padding: 25% 0%;
+  padding-bottom: 10%;
   background: #0e0e16;
   color: #f5f5f5;
 

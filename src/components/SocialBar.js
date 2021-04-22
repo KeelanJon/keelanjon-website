@@ -15,7 +15,14 @@ function SocialBar() {
     <LinksContainer>
       {socialLinks.map(function (item, index) {
         return (
-          <a key={index} href={item.link}>
+          <a
+            key={index}
+            href={item.link}
+            data-sal="slide-down"
+            data-sal-delay="600"
+            data-sal-easing="ease"
+            once="false"
+          >
             {item.name}
           </a>
         )

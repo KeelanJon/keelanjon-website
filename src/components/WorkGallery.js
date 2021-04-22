@@ -9,10 +9,15 @@ function WorkGallery(props) {
   // console.log(projects)
 
   return (
-    <GalleryContainer id="projects">
+    <GalleryContainer id="clientWork">
       {projects.map(function (item) {
         return (
-          <GalleryCard key={item.id}>
+          <GalleryCard
+            data-sal="slide-up"
+            data-sal-delay="0"
+            data-sal-easing="ease-in-out"
+            data-sal-duration="600"
+          >
             <Link to={item.slug}>
               <ImageContainer>
                 <FeaturedImage fluid={item.image.childImageSharp.fluid} />

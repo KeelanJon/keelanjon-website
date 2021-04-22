@@ -34,8 +34,8 @@ function IndexPage({ data }) {
       <Hero />
       <NewAboutSection />
       <Services />
-      <WorkGallery projectData={projects} />
       <PersonalProjects />
+      <WorkGallery projectData={projects} />
       <Contact />
     </Layout>
   )

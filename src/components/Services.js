@@ -13,7 +13,12 @@ import ServiceTwo from "../images/illustration-image.png"
 function Services({ data }) {
   return (
     <Container id="services">
-      <Wrapper>
+      <Wrapper
+        data-sal="slide-up"
+        data-sal-delay="0"
+        data-sal-easing="ease-in-out"
+        data-sal-duration="600"
+      >
         <ServiceCard>
           {/* <Img fluid={data.file.childImageSharp.fluid} alt="" /> */}
           <CardImage>
@@ -68,7 +73,7 @@ export const cardImageQuery = graphql`
 `
 
 const Container = styled.section`
-  padding: 0 0 25% 0;
+  padding: 15% 0;
 `
 const Wrapper = styled.div`
   width: 100%;

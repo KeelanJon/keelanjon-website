@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 //image imports
 import TaskAppImage from "../images/taskapp-thumbnail.png"
@@ -8,13 +9,19 @@ import websiteImage from "../images/personalwebsite-thumbnail.png"
 
 function PersonalProjects() {
   return (
-    <Container>
+    <Container id="projects">
       <StyledText>
-        <h4>Some stuff I coded</h4>
+        <h4>Things I've coded</h4>
         <h2>Personal Projects</h2>
+        {/* <Link to="#clientWork">Client Work</Link> */}
       </StyledText>
       <CardWrapper>
-        <StyledCard>
+        <StyledCard
+          data-sal="slide-up"
+          data-sal-delay="0"
+          data-sal-easing="ease-in-out"
+          data-sal-duration="600"
+        >
           <a href="https://github.com/KeelanJon/keelanjon-taskapp">
             <h5>Personal Task & Productivity App</h5>
             <p>
@@ -24,14 +31,24 @@ function PersonalProjects() {
             <img src={TaskAppImage} />
           </a>
         </StyledCard>
-        <StyledCard>
+        <StyledCard
+          data-sal="slide-up"
+          data-sal-delay="0"
+          data-sal-easing="ease-in-out"
+          data-sal-duration="600"
+        >
           <a href="https://github.com/KeelanJon/javascript-quizapp">
             <h5>Javascript Quiz</h5>
             <p>Think you have what it takes to pass the JavaScript quiz?</p>
             <img src={quizappImage} />{" "}
           </a>
         </StyledCard>
-        <StyledCard>
+        <StyledCard
+          data-sal="slide-up"
+          data-sal-delay="0"
+          data-sal-easing="ease-in-out"
+          data-sal-duration="600"
+        >
           <a href="https://github.com/KeelanJon/keelanjon-website">
             <h5>Personal Website</h5>
             <p>
@@ -53,7 +70,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
 
-  padding: 25% 0;
+  padding: 15% 0;
 
   h2 {
     font-size: 2rem;
@@ -63,6 +80,10 @@ const Container = styled.div`
 const StyledText = styled.div`
   flex: 1;
   width: 100%;
+
+  a {
+    text-decoration: none;
+  }
 `
 
 const CardWrapper = styled.div`

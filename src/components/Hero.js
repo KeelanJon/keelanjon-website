@@ -39,7 +39,12 @@ function Hero(props) {
         </ButtonWrapper>
       </ContentWrapper>
 
-      <ImageColumn>
+      <ImageColumn
+        data-sal="slide-down"
+        data-sal-delay="0"
+        data-sal-easing="ease"
+        data-sal-duration="600"
+      >
         <img src={PersonalImage} />
       </ImageColumn>
 
@@ -52,20 +57,22 @@ export default Hero
 
 const HeroContainer = styled.div`
   position: relative;
-  ${"" /* height: 100vh; */}
+
   display: flex;
   align-items: center;
   background: ${props => props.theme.dark.primaryColor};
 
+  @media screen and (min-width: ${props =>
+      props.theme.screenDimensions.desktop}) {
+    height: 100vh;
+  }
+
   @media screen and (max-width: ${props =>
       props.theme.screenDimensions.tablet}) {
-    ${"" /* flex-direction: column; */}
-    ${"" /* height: 100vh; */}
   }
 
   @media screen and (max-width: ${props =>
       props.theme.screenDimensions.mobile}) {
-    ${"" /* height: 100vh; */}
     flex-direction: column;
   }
 `

@@ -14,7 +14,11 @@ export default function Header({ siteTitle }) {
   }
 
   return (
-    <NavContainer>
+    <NavContainer
+      data-sal="slide-down"
+      data-sal-delay="900"
+      data-sal-easing="ease"
+    >
       <Menu MenuState={menuState} togglefunction={setMenuState} />
       <Link to="/">
         <Title>

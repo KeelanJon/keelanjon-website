@@ -12,6 +12,7 @@ const MenuLinks = [
   { text: "About", link: "#AboutMe" },
   { text: "Services", link: "#services" },
   { text: "Projects", link: "#projects" },
+  { text: "Client Work", link: "#clientWork" },
   { text: "Contact", link: "#contact" },
 ]
 

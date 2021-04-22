@@ -32,6 +32,14 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-remark`,
+
+    {
+      resolve: `gatsby-plugin-scroll-reveal`,
+      options: {
+        threshold: 0.2,
+        once: false,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
