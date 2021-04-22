@@ -73,7 +73,7 @@ export const cardImageQuery = graphql`
 `
 
 const Container = styled.section`
-  padding: 15% 0;
+  padding: 20% 0;
 `
 const Wrapper = styled.div`
   width: 100%;

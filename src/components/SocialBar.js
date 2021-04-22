@@ -37,6 +37,10 @@ const LinksContainer = styled.div`
   position: absolute;
   bottom: 10%;
   right: 0%;
+  @media screen and (max-width: ${props =>
+      props.theme.screenDimensions.mobile}) {
+    bottom: 12%;
+  }
 
   a {
     text-decoration: none;
@@ -46,6 +50,11 @@ const LinksContainer = styled.div`
 
     &:hover {
       opacity: 0.2;
+    }
+
+    @media screen and (max-width: ${props =>
+        props.theme.screenDimensions.mobile}) {
+      padding: 1rem 0.8rem;
     }
   }
 `

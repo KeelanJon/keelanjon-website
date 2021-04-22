@@ -73,13 +73,19 @@ const Container = styled.div`
   padding: 15% 0;
 
   h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+
+  @media screen and (max-width: ${props =>
+      props.theme.screenDimensions.tablet}) {
+    flex-direction: column;
   }
 `
 
 const StyledText = styled.div`
   flex: 1;
   width: 100%;
+  padding: 0 2rem 3rem 0;
 
   a {
     text-decoration: none;
@@ -90,10 +96,22 @@ const CardWrapper = styled.div`
   flex: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  @media screen and (max-width: ${props =>
+      props.theme.screenDimensions.tablet}) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /*---Custom screen dimension used here for adjusting on smaller tablets
+prior to mobile view. I just liked two columns on ipad...---*/
+  @media screen and (max-width: 950px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 const StyledCard = styled.div`
   padding: 1.5rem 0;
+  width: 100%;
 
   &:nth-of-type(1) {
     padding-right: 2rem;
