@@ -1,7 +1,7 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 
 <h1 align="center">
-  Keelan Jonathan - Peronal Website
+  Keelan Jonathan - Personal Website
 </h1>
 
 Hey welcome to the KeelanJon website repository, this is a website I built with
