@@ -1,28 +1,27 @@
 import React from "react"
 import styled from "styled-components"
 
-function PrimaryButton({ children }) {
-  return <PrimaryBtn>{children}</PrimaryBtn>
+function PrimaryButton(props) {
+  return <PrimaryBtn>{props.children}</PrimaryBtn>
 }
 
 export default PrimaryButton
 
 const PrimaryBtn = styled.button`
-  color: ${props => props.theme.dark.primaryColor};
-  padding: 1.2rem 4rem;
+  background: none;
+  text-transform: uppercase;
   border: none;
-  font-size: 0.9rem;
-  margin: 2rem 1rem 2rem 0;
-
-  transition: 0.3s ease 0s;
+  letter-spacing: 4px;
+  font-weight: 300;
+  font-size: 12px;
   cursor: pointer;
 
-  &:hover {
-    filter: invert(1);
-  }
+  padding: 2rem 0rem;
 
-  @media screen and (max-width: ${props =>
-      props.theme.screenDimensions.mobile}) {
-    padding: 1.2rem 2rem;
+  transition: 0.3s ease 0s;
+
+  &:hover {
+    letter-spacing: 5px;
+    opacity: 0.5;
   }
 `

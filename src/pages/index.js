@@ -3,19 +3,14 @@ import { Link } from "gatsby"
 import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import Img from "gatsby-image"
 
-import AboutSection from "../components/AboutSection"
 import NewAboutSection from "../components/NewAboutSection"
-import SectionWrapper from "../components/SectionWrapper"
-import WorkGallery from "../components/WorkGallery"
 import Contact from "../components/Contact"
-import Hero from "../components/Hero"
-import SlideInText from "../components/SlideInText"
-import Services from "../components/Services"
 import PersonalProjects from "../components/PersonalProjects"
+import HeroNew from "../components/HeroNew"
+import PortfolioGrid from "../components/PortfolioGrid"
 
 function IndexPage({ data }) {
   //Stores the project object data returned from graphql query
@@ -30,12 +25,10 @@ function IndexPage({ data }) {
 
   return (
     <Layout>
-      <SEO title="Home" />
-      <Hero />
+      <SEO title="Designer and Front End Developer" />
+      <HeroNew />
       <NewAboutSection />
-      <Services />
-      <PersonalProjects />
-      <WorkGallery projectData={projects} />
+      <PortfolioGrid projectData={projects} />
       <Contact />
     </Layout>
   )
@@ -49,6 +42,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         description
+        author
       }
     }
 
@@ -59,9 +53,10 @@ export const pageQuery = graphql`
         title
         category
         slug
+        technology
         image {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 1920, quality: 90) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -81,7 +76,7 @@ export const pageQuery = graphql`
           paragraphTwo
           banner {
             childImageSharp {
-              fluid(maxWidth: 1920) {
+              fluid(maxWidth: 1920, quality: 90) {
                 ...GatsbyImageSharpFluid
               }
             }

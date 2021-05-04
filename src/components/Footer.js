@@ -16,6 +16,6 @@ export default function Footer() {
 const StyledFooter = styled.footer`
 const FooterContainer = styled.footer
   text-align: left;
-  padding: 5% 0;
+  padding: 5vh 0;
 
 `

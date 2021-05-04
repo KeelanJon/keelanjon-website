@@ -20,7 +20,12 @@ function WorkGallery(props) {
           >
             <Link to={item.slug}>
               <ImageContainer>
-                <FeaturedImage fluid={item.image.childImageSharp.fluid} />
+                <FeaturedImage
+                  fluid={item.image.childImageSharp.fluid}
+                  objectFit="cover"
+                  objectPosition="50% 50%"
+                  alt=""
+                />
               </ImageContainer>
               <CardText>
                 <Category>{item.category}</Category>

@@ -19,7 +19,6 @@ function SocialBar() {
             key={index}
             href={item.link}
             data-sal="slide-down"
-            data-sal-delay="600"
             data-sal-easing="ease"
             once="false"
           >
@@ -35,18 +34,27 @@ export default SocialBar
 
 const LinksContainer = styled.div`
   position: absolute;
-  bottom: 10%;
-  right: 0%;
+  top: 500px;
+  right: -5%;
+  transform: rotate(90deg);
+
+  @media screen and (max-width: ${props =>
+      props.theme.screenDimensions.tablet}) {
+    right: -10%;
+  }
+
   @media screen and (max-width: ${props =>
       props.theme.screenDimensions.mobile}) {
-    bottom: 12%;
+    right: -20%;
+    top: 80vh;
   }
 
   a {
     text-decoration: none;
     padding: 1rem 1.5rem;
     font-weight: 300;
-    transition: 0.3s ease 0s;
+    font-size: 12px;
+    transition: 0.3s ease 0s !important;
 
     &:hover {
       opacity: 0.2;

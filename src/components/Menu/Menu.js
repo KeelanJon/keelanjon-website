@@ -2,17 +2,14 @@ import React, { useState } from "react"
 import styled, { ThemeProvider, keyframes } from "styled-components"
 import { MdClear } from "react-icons/md"
 import { IoIosArrowForward } from "react-icons/io"
-import VideoFeed from "../VideoFeed/VideoFeed"
 import Footer from "../Footer"
 import BackgroundCircle from "../BackgroundCircle"
 import { Link } from "gatsby"
 
 const MenuLinks = [
   { text: "Home", link: "/" },
-  { text: "About", link: "#AboutMe" },
-  { text: "Services", link: "#services" },
+  { text: "About", link: "/about" },
   { text: "Projects", link: "#projects" },
-  { text: "Client Work", link: "#clientWork" },
   { text: "Contact", link: "#contact" },
 ]
 
@@ -68,7 +65,7 @@ function Menu(props) {
               <h4>Contact</h4>
               <ul>
                 <li>info@keelsdesign.co.uk</li>
-                <li>07476210620</li>
+                <li>07376210620</li>
               </ul>
             </LinksContainer>
           </LinksColumn>

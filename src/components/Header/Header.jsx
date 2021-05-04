@@ -6,6 +6,9 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 import Menu from "../Menu/Menu"
 
+//images imports
+import SiteLogo from "../../images/keelanjon-logo.png"
+
 export default function Header({ siteTitle }) {
   const [menuState, setMenuState] = useState(false)
 
@@ -22,7 +25,7 @@ export default function Header({ siteTitle }) {
       <Menu MenuState={menuState} togglefunction={setMenuState} />
       <Link to="/">
         <Title>
-          <h1>KeelanJon</h1>
+          <img src={SiteLogo} />
         </Title>
       </Link>
 
@@ -43,7 +46,7 @@ const NavContainer = styled.div`
   justify-content: space-between;
 
   background: none;
-  padding: 3rem 5%;
+  padding: 2% 2%;
 
   position: fixed;
   top: 0;
@@ -57,7 +60,7 @@ const NavContainer = styled.div`
 
   @media screen and (max-width: ${props =>
       props.theme.screenDimensions.tablet}) {
-    padding: 1rem 10%;
+    padding: 5% 5%;
   }
 `
 
@@ -65,14 +68,14 @@ const Title = styled.div`
   font-size: 1rem;
   background: none;
 
-  transition: 0.3s ease 0s;
+  transition: 0.3s ease-in 0s;
 
   & > * {
     background: none;
   }
 
   &:hover {
-    transform: translateX(20%);
+    transform: rotate(180deg);
   }
 `
 const BurgerMenu = styled.div`

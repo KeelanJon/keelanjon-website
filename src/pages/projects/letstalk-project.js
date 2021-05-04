@@ -10,10 +10,10 @@ import ProjectGallery from "../../components/ProjectGallery"
 
 function letstalkProject({ data }) {
   const projectInfo = data.allProjectsJson.edges[0].node
+  console.log(projectInfo)
 
   return (
     <Layout>
-      {console.log(projectInfo)}
       <Header>
         <h1>{projectInfo.title}</h1>
         <p>
@@ -92,7 +92,7 @@ export const ProjectData = graphql`
           }
           featuredImage {
             childImageSharp {
-              fluid(maxWidth: 1920) {
+              fluid(maxWidth: 1920, quality: 90) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -171,10 +171,10 @@ const DetailCard = styled.div`
   }
 `
 const FeaturedImage = styled.div`
-  img {
+  ${"" /* img {
     width: 100%;
     height: 100%;
-  }
+  } */}
 `
 const TextArea = styled.div`
   display: flex;

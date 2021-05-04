@@ -12,9 +12,8 @@ function Sphere(props) {
       right={props.right}
       bottom={props.bottom}
       height={props.height}
-    >
-      <img src={SphereImage} alt="A purple floaty orb, it's cool trust me" />
-    </SphereContainer>
+      width={props.width}
+    ></SphereContainer>
   )
 }
 
@@ -26,7 +25,7 @@ const hoverAnimation = keyframes`
     transform: translateY(0%);
   }
   50%{
-    transform: translateY(10%);
+    transform: translateY(5%);
   }
   100%{
     transform: translateY(0%);
@@ -40,10 +39,17 @@ const SphereContainer = styled.div`
   left: ${props => props.left};
   right: ${props => props.right};
   bottom: ${props => props.bottom};
+  width: ${props => props.width};
+  height: ${props => props.height};
 
   animation: ${hoverAnimation} 4s infinite;
 
-  img {
-    height: ${props => props.height};
-  }
+  filter: blur(150px);
+  opacity: 0.75;
+  background: linear-gradient(
+    134.29deg,
+    rgba(60, 150, 200, 0.5) -10.9%,
+    rgba(88, 22, 230, 0.5) 65.48%
+  );
+  border-radius: 50%;
 `

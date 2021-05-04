@@ -14,7 +14,7 @@ const theme = {
   },
   fonts: ["Open Sans, sans-serif"],
   fontSizes: {
-    small: ".865rem",
+    small: ".8rem",
     medium: "2rem",
     large: "3.8vw",
     bodyText: "1.2rem",

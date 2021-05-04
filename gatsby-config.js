@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Keelan Jon`,
-    description: `A Developer Site from Keelan Jonathan`,
+    description: `Hi, I'm Keelan. A Design and Developer from Wales.`,
     author: `Keelan Jonathan`,
   },
   plugins: [

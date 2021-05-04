@@ -5,7 +5,6 @@ import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 //image Imports
-import HeaderImage from "../../data/project-images/letstalk-featured-image.png"
 import ProjectGallery from "../../components/ProjectGallery"
 
 function waleslinkProject({ data }) {

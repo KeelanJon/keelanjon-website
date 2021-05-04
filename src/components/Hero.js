@@ -4,7 +4,6 @@ import PersonalImage from "../images/Keelan Jon - Website Image.png"
 import PrimaryButton from "./buttons/PrimaryButton"
 import SecondaryBtn from "./buttons/SecondaryButton"
 import SocialBar from "./SocialBar"
-import SlideInText from "./SlideInText"
 import BGSphere from "./3DObjects/Sphere"
 
 function Hero(props) {
@@ -14,20 +13,6 @@ function Hero(props) {
       <BGSphere top="50%" left="60%" height="50px" /> */}
 
       <ContentWrapper>
-        <SlideInText>
-          <h4>Striving for Artistic creativity</h4>
-        </SlideInText>
-        <SlideInText>
-          <Title>Keelan Jonathan</Title>
-        </SlideInText>
-        <SlideInText>
-          <Title>Design & Developer</Title>
-        </SlideInText>
-        <SlideInText>
-          <p style={{ fontSize: "1rem" }}>
-            My name is Keelan. I am a Design, Developer and 3D Illustrator.
-          </p>
-        </SlideInText>
         <ButtonWrapper>
           <a href="#AboutMe">
             <PrimaryButton>Explore</PrimaryButton>

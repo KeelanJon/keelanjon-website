@@ -12,10 +12,16 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Inter', sans-serif;
         scroll-behavior: smooth;
 
+        
+
     }
     body{
         background: ${props => props.theme.dark.primaryColor};
+
+        
     }
+
+
     p{
         font-weight: 300;
         padding: 1.5rem 0;

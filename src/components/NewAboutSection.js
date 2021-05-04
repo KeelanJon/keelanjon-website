@@ -1,5 +1,7 @@
 import React from "react"
 import styled from "styled-components"
+import PrimaryButton from "./buttons/PrimaryButton"
+import { Link } from "gatsby"
 
 function About() {
   return (
@@ -9,14 +11,8 @@ function About() {
         data-sal-delay="300"
         data-sal-easing="ease"
         data-sal-duration="600"
-        once="false"
-        data-sal-repeat="true"
-        sal={{ once: true, threshold: 1 }}
       >
-        <h2>
-          Designer, Developer and 3D Illustrator. Bringing your Digital World to
-          Life
-        </h2>
+        <h2>I like making things pretty and bringing them to life</h2>
       </div>
 
       <div
@@ -26,21 +22,25 @@ function About() {
         data-sal-duration="900"
       >
         <p>
-          Web Design & Developer based near Cardiff, South Wales UK. I run a
-          small web design business under the name KeelsDesign, where I work
-          with local businesses across Wales to help grow their online presence.
+          Freelance Design & Developer based near Cardiff, South Wales UK.
+          Running a small web design business under the name KeelsDesign, where
+          I work with people and businesses to design creative solutions to
+          their digital needs.
         </p>
         <br></br>
         <p>
-          In my spare time, I like to create 3D art, practice my coding skills,
-          drink lots of coffee and getting lost in a good movie. I also enjoying
-          going to the gym and creating educational content on my{" "}
+          In my spare time I like to create 3D illustrations and content for my{" "}
           <a href="https://www.youtube.com/channel/UCsx6kQZt0y3Ie5ob_cwQ5cQ">
-            YouTube channel
+            Youtube Channel
           </a>
+          , drink lots of coffee, and getting lost in a good movie. You’ll
+          likely catch me watching Lord of the Rings, or admiring a bunch of
+          design work on Dribbble.
         </p>
 
-        <a href="#projects">Discover my Work</a>
+        <Link to="#portfolioGrid">
+          <PrimaryButton>Recent Work</PrimaryButton>
+        </Link>
       </div>
     </Container>
   )
@@ -52,12 +52,22 @@ const Container = styled.div`
   display: flex;
 
   text-align: left;
-  padding: 25% 0%;
-  padding-bottom: 10%;
+  padding: 25vh 0%;
   background: #0e0e16;
   color: #f5f5f5;
 
   line-height: 1.8;
+
+  @media screen and (max-width: ${props =>
+      props.theme.screenDimensions.tablet}) {
+    padding: 20% 0;
+  }
+
+  @media screen and (max-width: ${props =>
+      props.theme.screenDimensions.mobile}) {
+    padding: 10vh 0;
+    flex-direction: column;
+  }
 
   div {
     flex: 1;
@@ -82,14 +92,14 @@ const Container = styled.div`
   }
 
   h2 {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 2.5rem;
     letter-spacing: 1px;
     text-align: left;
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: justify;
     padding: 0;
     padding-top: 1rem;
@@ -97,9 +107,5 @@ const Container = styled.div`
 
   p:nth-of-type(2) {
     padding-bottom: 1rem;
-  }
-
-  @media screen and (max-width: 798px) {
-    flex-direction: column;
   }
 `
