@@ -11,9 +11,9 @@ import Seo from "../../components/seo"
 function ProjectFour({ data }) {
   const projectInfo = data.allProjectsJson.edges[0].node
   const projectFeatures = [
-    "Built with ReactJS,",
-    "Utilises CRUD,",
-    "Modular Styles",
+    "Custom 3D Illustrions,",
+    "24 3D Character Poses",
+    "8 Object Assets",
   ]
 
   return (
@@ -31,7 +31,15 @@ function ProjectFour({ data }) {
         technology={projectInfo.technology}
       />
       <FeaturedImage image={projectInfo.featuredImage.childImageSharp.fluid} />
-      <ProjectDescription description="" features={projectFeatures} />
+      <ProjectDescription
+        description="A 3D asset UI/UX design product utilising Blender for 3D illustrations and character design, through to exporting into Figma for mockup and protyping. 
+        "
+        features={projectFeatures}
+        buttonText="Design Preview"
+        buttonText2="Product Page"
+        buttonURL="https://www.figma.com/file/lxkrFTodbckkOoZCBRvGJf/3D-Assets-Preview?node-id=0%3A1"
+        buttonURL2="https://ui8.net/keelan-jon/products/3d-web-illustration---character-pack"
+      />
       <Contact />
     </Layout>
   )

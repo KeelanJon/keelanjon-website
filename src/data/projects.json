@@ -44,13 +44,13 @@
     "slug": "/projects/project-three/",
     "author": "Keelan Jonathan",
     "category": "UI/UX Design, React",
-    "technology": "HTML5, CSS3, ReactJS, Styled Components",
+    "technology": "HTML5, CSS3, ReactJS, Styled Components, Figma",
     "date": "16 Aug 2018"
 },
 
 
 {
-    "title": "3D App UI/UX Design",
+    "title": "3D App Assets UI/UX Design Product",
     "description": "A project developed with Wales Environment Link from Keelan Jon",
     "image": "../images/3dAppDesign.png",
     "featuredImage": "../images/3d-ui-design.png",
@@ -61,7 +61,7 @@
     "url": "https://waleslink.org",
     "slug": "/projects/project-four/",
     "author": "Keelan Jonathan",
-    "category": "Web Development",
+    "category": "Product Design, UX/UX Design",
     "technology": "Figma, Blender",
     "date": "23 Mar 2021"
 }

@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 function PrimaryButton(props) {
-  return <PrimaryBtn>{props.children}</PrimaryBtn>
+  return <PrimaryBtn style={props.style}>{props.children}</PrimaryBtn>
 }
 
 export default PrimaryButton

@@ -18,8 +18,13 @@ function ProjectDescription(props) {
         <ContentWrapper>
           <h2>Overview</h2>
           <p>{props.description}</p>
-          <a href="#">
-            <PrimaryButton>GitHub</PrimaryButton>
+          <a href={props.buttonURL}>
+            <PrimaryButton style={{ margin: "0 2rem 0 0" }}>
+              {props.buttonText}
+            </PrimaryButton>
+          </a>
+          <a href={props.buttonURL2}>
+            <PrimaryButton>{props.buttonText2}</PrimaryButton>
           </a>
         </ContentWrapper>
       </FlexBox>

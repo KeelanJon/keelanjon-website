@@ -35,6 +35,10 @@ function ProjectOne({ data }) {
       <ProjectDescription
         description="This is a project developed utilising core JavaScript concepts including DOM manipulation for displaying questions and variables, imports and exports for loading external data and local storage functionality for saving user scores to the host device. Try this short quiz and see how well you know JavaScript."
         features={projectFeatures}
+        buttonURL="https://keelanjon.github.io/javascript-quizapp/"
+        buttonURL2="https://github.com/KeelanJon/javascript-quizapp"
+        buttonText="Take the Quiz"
+        buttonText2="Github"
       />
       <Contact />
     </Layout>

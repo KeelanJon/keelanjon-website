@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
     <LayoutContainer>
       <Theme>
         <GlobalStyle />
-        <CustomCursor />
+        {/* <CustomCursor /> */}
         <Header />
 
         <StyledMain>{children}</StyledMain>

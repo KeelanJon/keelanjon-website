@@ -31,7 +31,14 @@ function ProjectThree({ data }) {
         technology={projectInfo.technology}
       />
       <FeaturedImage image={projectInfo.featuredImage.childImageSharp.fluid} />
-      <ProjectDescription description="" features={projectFeatures} />
+      <ProjectDescription
+        description="A mobile first personal productivity app, firstly designed and prototyped in Figma, before development in ReactJS for a quick and responsive user experience. Currently in version 1.0 with additional features planned in future updates."
+        features={projectFeatures}
+        buttonText="Github"
+        buttonURL="https://github.com/KeelanJon/keelanjon-taskapp"
+        buttonText2="Design Preview"
+        buttonURL2="https://www.figma.com/file/mzgPRReYSnAvb3XoStwJU5/Task-App-Simple-Prototype?node-id=0%3A1"
+      />
       <Contact />
     </Layout>
   )

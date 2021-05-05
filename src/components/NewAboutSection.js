@@ -21,11 +21,17 @@ function About() {
         data-sal-easing="ease"
         data-sal-duration="900"
       >
-        <p>
+        {/* <p>
           Freelance Design & Developer based near Cardiff, South Wales UK.
           Running a small web design business under the name KeelsDesign, where
           I work with people and businesses to design creative solutions to
           their digital needs.
+        </p> */}
+        <p>
+          Hi I’m Keelan, I am a developer with a keen interest in Front End
+          Development and a passion for being creative, artistic and minimal
+          design. I have skils and interests in a wide variety of areas, from
+          Front End Development, UI/UX design, WordPress and 3D illustration.
         </p>
         <br></br>
         <p>

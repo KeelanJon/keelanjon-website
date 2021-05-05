@@ -17,7 +17,13 @@ function PortfolioGrid(props) {
         {projects.map(function (item, index) {
           ++projectID
           return (
-            <PortfolioCard id={`item-` + projectID}>
+            <PortfolioCard
+              id={`item-` + projectID}
+              data-sal="slide-up"
+              data-sal-delay="300"
+              data-sal-easing="ease"
+              data-sal-duration="600"
+            >
               <Link to={item.slug}>
                 <FeaturedImage
                   fluid={item.image.childImageSharp.fluid}
@@ -50,8 +56,6 @@ const GridContainer = styled.div`
   grid-template-rows: repeat(8, 1fr);
 
   height: 100vh;
-
-  background: red;
 
   #item-1 {
     grid-column: 1/6;
@@ -133,6 +137,7 @@ const CardText = styled.div`
     font-size: 0.8rem;
     font-weight: 500;
     letter-spacing: 4px;
+    width: 80%;
 
     transform: translateY(300%);
   }
@@ -140,6 +145,7 @@ const CardText = styled.div`
   #category {
     font-size: 0.8rem;
     padding: 0;
+    width: 80%;
 
     transform: translateY(300%);
   }
