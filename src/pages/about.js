@@ -74,7 +74,9 @@ function about() {
               helps me pursue a career in full stack and user experience design.
               <br />
               <br />
-              I’m also a big Lord of the Rings fan.
+              <a href="https://www.youtube.com/watch?v=uE-1RPDqJAY">
+                I’m also a big Lord of the Rings fan.
+              </a>
             </p>
             <Link to="#tools">
               <PrimaryButton>My Tools</PrimaryButton>
@@ -86,6 +88,7 @@ function about() {
       <StyledSection id="tools">
         <FlexBox>
           <ContentWrapper>
+            <h2>My Daily Tools</h2>
             <h3>Web Development</h3>
             <ul>
               {webDevSkills.map(function (skill, index) {
@@ -94,6 +97,7 @@ function about() {
             </ul>
           </ContentWrapper>
           <ContentWrapper>
+            <h2></h2>
             <h3>UI/UX Skills</h3>
             <ul>
               {uxSkills.map(function (skill, index) {
@@ -135,24 +139,43 @@ const StyledSection = styled.section`
 
 const ContentWrapper = styled.div`
   flex: 1;
+  min-width: 400px;
+
+  @media screen and (max-width: ${props =>
+      props.theme.screenDimensions.mobile}) {
+    min-width: 100%;
+  }
 
   h2 {
     font-size: ${props => props.theme.fontSizes.medium};
+    padding: 2rem 0;
+    padding-top: 0;
   }
 
   h3 {
     font-weight: 500;
-    padding: 2rem 0;
+    padding: 2.5rem 0 1rem 0;
+  }
+
+  p {
+    font-size: ${props => props.theme.fontSizes.small};
+    width: 100%;
+    text-align: justify;
   }
 
   p:nth-of-type(1) {
     padding-top: 0;
-    text-align: justify;
   }
 
   li {
     font-size: 1rem;
+    font-weight: 300;
     padding: 0.5rem 0;
     list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: 500;
   }
 `
