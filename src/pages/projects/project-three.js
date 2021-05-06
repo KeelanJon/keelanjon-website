@@ -11,9 +11,12 @@ import Seo from "../../components/seo"
 function ProjectThree({ data }) {
   const projectInfo = data.allProjectsJson.edges[0].node
   const projectFeatures = [
-    "Built with ReactJS,",
-    "Utilises CRUD,",
-    "Modular Styles",
+    "ReactJS,",
+    "CRUD,",
+    "UseState",
+    "useEffect",
+    "Local Storage",
+    "Bootstrap",
   ]
 
   return (
@@ -32,11 +35,14 @@ function ProjectThree({ data }) {
       />
       <FeaturedImage image={projectInfo.featuredImage.childImageSharp.fluid} />
       <ProjectDescription
-        description="A mobile first personal productivity app, firstly designed and prototyped in Figma, before development in ReactJS for a quick and responsive user experience. Currently in version 1.0 with additional features planned in future updates."
+        description="A personal task app developed to keep track of projects 
+        and daily tasks. Build with ReactJS utilising a combination of
+        useState and useEffect hooks to create, update, read and delete data, in  addition 
+        to using local storage to keep track of tasks after exiting a 
+        browser session. Styles implemented using Bootstrap css library."
         features={projectFeatures}
         buttonText="Github"
         buttonURL="https://github.com/KeelanJon/keelanjon-taskapp"
-        buttonText2="Design Preview"
         buttonURL2="https://www.figma.com/file/mzgPRReYSnAvb3XoStwJU5/Task-App-Simple-Prototype?node-id=0%3A1"
       />
       <Contact />

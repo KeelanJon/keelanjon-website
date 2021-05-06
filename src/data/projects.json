@@ -32,10 +32,10 @@
     "date": "06 Apr 2021"
 },
 {
-    "title": "Task and Personal Productivity App",
+    "title": "Bootstrap Task App",
     "description": "This is a WordPress Website Built for Blood Bikes Wales",
-    "image": "../images/taskAppImage.png",
-    "featuredImage": "../images/task-app-image.png",
+    "image": "../images/bootstrap-task-app-thumbnail.jpg",
+    "featuredImage": "../images/bootstrap-task-app-image.jpg",
     "galleryImages" : ["../images/bloodbikes-image1.png", 
         "../images/bloodbikes-image2.png", 
         "../images/bloodbikes-image3.png", 
@@ -43,8 +43,8 @@
     "url": "https://waleslink.org",
     "slug": "/projects/project-three/",
     "author": "Keelan Jonathan",
-    "category": "UI/UX Design, React",
-    "technology": "HTML5, CSS3, ReactJS, Styled Components, Figma",
+    "category": "ReactJS, Bootstrap",
+    "technology": "HTML5, CSS3, JavaScript, ReactJS, Bootstrap",
     "date": "16 Aug 2018"
 },
 
