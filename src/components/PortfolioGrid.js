@@ -53,9 +53,9 @@ const Container = styled.section`
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: repeat(12, 1fr);
 
-  height: 100vh;
+  height: 120vh;
 
   #item-1 {
     grid-column: 1/6;
@@ -74,7 +74,12 @@ const GridContainer = styled.div`
 
   #item-4 {
     grid-column: 6/9;
-    grid-row: 5/9;
+    grid-row: 5/13;
+  }
+
+  #item-5 {
+    grid-column: 1/6;
+    grid-row: 9/13;
   }
 
   @media screen and (max-width: ${props =>

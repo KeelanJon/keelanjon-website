@@ -59,13 +59,6 @@ export const ProjectData = graphql`
           date
           description
           technology
-          galleryImages {
-            childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
           featuredImage {
             childImageSharp {
               fluid(maxWidth: 1920, quality: 90) {

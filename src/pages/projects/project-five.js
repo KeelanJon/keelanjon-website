@@ -8,20 +8,18 @@ import ProjectDescription from "../../components/ProjectComponents/ProjectDescri
 import Contact from "../../components/Contact"
 import Seo from "../../components/seo"
 
-function ProjectThree({ data }) {
+function ProjectFour({ data }) {
   const projectInfo = data.allProjectsJson.edges[0].node
   const projectFeatures = [
-    "ReactJS,",
-    "CRUD,",
-    "UseState",
-    "useEffect",
-    "Local Storage",
-    "Bootstrap",
+    "Open Weather API,",
+    "Google Geocoding API",
+    "Dark Mode Toggle",
+    "SASS Styling",
   ]
 
   return (
     <Layout>
-      <Seo title="Project Three" description="Project page three" />
+      <Seo title="Project Four" description="Project page four" />
       <PageHeader
         header={projectInfo.title}
         subheader={projectInfo.category}
@@ -35,26 +33,32 @@ function ProjectThree({ data }) {
       />
       <FeaturedImage image={projectInfo.featuredImage.childImageSharp.fluid} />
       <ProjectDescription
-        description="A personal task app developed to keep track of projects 
-        and daily tasks. Build with ReactJS utilising a combination of
-        useState and useEffect hooks to create, update, read and delete data, in  addition 
-        to using local storage to keep track of tasks after exiting a 
-        browser session. Styles implemented using Bootstrap css library."
+        description="A weather app project programmed 
+        using HTML5, CSS3, SASS and JavaScript. 
+        Utilising both an Open weather API, in 
+        combination with the Google Geocoding API. 
+        This app allows the user to enter any location 
+        which is then translated into longitude and 
+        latitude data via geocoding, prior to fetching 
+        data from the open weather api and receiving a 
+        7 day forecast. 
+        This app also features a simple dark mode theme 
+        implementation that can be toggled.
+        "
         features={projectFeatures}
-        buttonText="Github"
-        buttonURL="https://github.com/KeelanJon/keelanjon-taskapp"
-        buttonURL2="https://www.figma.com/file/mzgPRReYSnAvb3XoStwJU5/Task-App-Simple-Prototype?node-id=0%3A1"
+        buttonText="GITHUB"
+        buttonURL="https://github.com/KeelanJon/keelanjon-weatherapp"
       />
       <Contact />
     </Layout>
   )
 }
 
-export default ProjectThree
+export default ProjectFour
 
 export const ProjectData = graphql`
-  query ProjectThreeData {
-    allProjectsJson(filter: { slug: { eq: "/projects/project-three/" } }) {
+  query ProjectFiveData {
+    allProjectsJson(filter: { slug: { eq: "/projects/project-five/" } }) {
       edges {
         node {
           id

@@ -9,7 +9,7 @@ import { Link } from "gatsby"
 const MenuLinks = [
   { text: "Home", link: "/" },
   { text: "About", link: "/about" },
-  { text: "Projects", link: "#projects" },
+  { text: "Projects", link: "/#portfolioGrid" },
   { text: "Contact", link: "#contact" },
 ]
 
