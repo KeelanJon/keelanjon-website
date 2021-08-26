@@ -71,7 +71,7 @@ function about() {
               solutions, and promote better search engine optimisation. I am
               currently focused on Front End Development but am seeking a role
               that challenges my skills, values creativity and good design, and
-              helps me pursue a career in full stack and user experience design.
+              helps me to pursue a rewarding career.
               <br />
               <br />
               <a href="https://www.youtube.com/watch?v=uE-1RPDqJAY">
