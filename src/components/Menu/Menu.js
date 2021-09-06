@@ -65,7 +65,7 @@ function Menu(props) {
               <h4>Contact</h4>
               <ul>
                 <li>info@keelsdesign.co.uk</li>
-                <li>07376210620</li>
+                {/* <li>07376210620</li> */}
               </ul>
             </LinksContainer>
           </LinksColumn>
