@@ -44,7 +44,7 @@ const LayoutContainer = styled.div`
   position: relative;
   overflow: hidden;
   padding: 0% 10%;
-  max-width: 1920px;
+  ${"" /* max-width: 1920px; */}
   margin: auto auto;
 `
 const StyledMain = styled.main`
