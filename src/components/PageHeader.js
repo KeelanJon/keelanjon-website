@@ -32,6 +32,15 @@ function PageHeader(props) {
         >
           {props.header}
         </StyledHeader>
+        <PageDescription
+          data-sal="slide-up"
+          data-sal-delay="300"
+          data-sal-easing="ease"
+          data-sal-duration="900"
+          hasDescription={true}
+        >
+          {props.description}
+        </PageDescription>
       </FlexBox>
       <FlexBox direction="column" align="center" justify="center">
         <a href={props.buttonURL}>
@@ -61,6 +70,7 @@ export default PageHeader
 //Note to self. Do not make this container Realtive, as the
 //floating blur spheres are absoultely positioned realtive to
 //the layout component.
+
 const Container = styled.section`
   padding: 30vh 0;
   width: 100%;
@@ -102,6 +112,11 @@ const SubHeader = styled.h4`
   letter-spacing: 4px;
   font-weight: 300;
   line-height: 2;
+`
+
+const PageDescription = styled.p`
+  padding: 0 10% 10% 10%;
+  max-width: 1200px;
 `
 
 const StyledImage = styled.img`
