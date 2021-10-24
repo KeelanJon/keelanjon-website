@@ -88,7 +88,8 @@ const MenuContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  transform: ${props => (props.open ? "translateY(0)" : "translateY(-100%)")};
+  transform: ${props => (props.open ? "translateX(0)" : "translateX(-100%)")};
+  opacity: ${props => (props.open ? "1" : "0")};
 
   z-index: 9;
   height: 100vh;
