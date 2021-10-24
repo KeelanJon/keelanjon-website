@@ -10,6 +10,7 @@ const MenuLinks = [
   { text: "Home", link: "/" },
   { text: "About", link: "/about" },
   { text: "Projects", link: "/#portfolioGrid" },
+  { text: "NFT Gallery", link: "/oddfolk" },
   { text: "Contact", link: "#contact" },
 ]
 
