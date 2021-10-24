@@ -6,8 +6,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import PageHeader from "../components/PageHeader"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import bannerImage from "../images/odd-folk-header.jpg"
-import nftImage from "../images/OddFolk-KeelanJon.png"
 import PrimaryButton from "../components/buttons/PrimaryButton"
 
 function Oddfolk(props) {
