@@ -10,7 +10,7 @@ import Sphere from "./3DObjects/Sphere"
 
 function PageHeader(props) {
   return (
-    <Container>
+    <Container hasDescription={props.description}>
       <FlexBox direction="column" align="center" justify="center">
         <Sphere height="10vw" width="10vw" top="-5vh" right="40vw" />
         <Sphere height="20vw" width="20vw" top="90vh" left="-10vw" />
@@ -37,7 +37,6 @@ function PageHeader(props) {
           data-sal-delay="300"
           data-sal-easing="ease"
           data-sal-duration="900"
-          hasDescription={true}
         >
           {props.description}
         </PageDescription>
@@ -85,6 +84,8 @@ const Container = styled.section`
   @media screen and (max-width: ${props =>
       props.theme.screenDimensions.mobile}) {
     padding: 30vh 0;
+
+    padding: ${props => (props.hasDescription ? "20vh 0;" : "")};
   }
 `
 
@@ -117,6 +118,11 @@ const SubHeader = styled.h4`
 const PageDescription = styled.p`
   padding: 0 10% 10% 10%;
   max-width: 1200px;
+
+  @media screen and (max-width: ${props =>
+      props.theme.screenDimensions.mobile}) {
+    padding: 0;
+  }
 `
 
 const StyledImage = styled.img`
