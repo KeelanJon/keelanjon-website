@@ -59,7 +59,6 @@ const Container = styled.div`
 
   text-align: left;
   padding: 25vh 0%;
-  background: #0e0e16;
   color: #f5f5f5;
 
   line-height: 1.8;

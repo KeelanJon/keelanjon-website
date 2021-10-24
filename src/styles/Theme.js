@@ -3,7 +3,8 @@ import { ThemeProvider } from "styled-components"
 
 const theme = {
   dark: {
-    primaryColor: "#0E0E16",
+    // primaryColor: "#0E0E16",
+    primaryColor: "#0c0c0c",
     secondaryColor: "#F5F5F5",
     purple: "purple",
   },
