@@ -12,19 +12,28 @@ const linksArray = [
   {
     text: "Youtube",
     url: "https://www.youtube.com/KeelanJonathan",
+    target: "_blank",
   },
   {
     text: "UI/UX Character Pack 2020",
     url:
       "https://ui8.net/keelan-jon/products/3d-web-illustration---character-pack?status=6",
+    target: "_blank",
   },
   {
     text: "Patreon",
     url: "https://www.patreon.com/keelanjon",
+    target: "_blank",
+  },
+  {
+    text: "NFT Gallery",
+    url: "/oddfolk",
+    target: "_self",
   },
   {
     text: "Store",
     url: "https://app.gumroad.com/keelanjon",
+    target: "_blank",
   },
 ]
 
@@ -36,7 +45,11 @@ function links(props) {
 
       {linksArray.map(function (item, index) {
         return (
-          <a href={item.url} ariaLabel="This is a button link" target="_blank">
+          <a
+            href={item.url}
+            ariaLabel="This is a button link"
+            target={item.target}
+          >
             <LinkButton>{item.text}</LinkButton>
           </a>
         )

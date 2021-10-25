@@ -74,8 +74,11 @@ function about() {
               helps me to pursue a rewarding career.
               <br />
               <br />
-              <a href="https://www.youtube.com/watch?v=uE-1RPDqJAY">
-                I’m also a big Lord of the Rings fan.
+              <a
+                href="https://www.youtube.com/watch?v=uE-1RPDqJAY"
+                target="_blank"
+              >
+                I’m also a big Lord of the Rings fan. (This is a link)
               </a>
             </p>
             <Link to="#tools">
