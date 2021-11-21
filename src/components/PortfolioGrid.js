@@ -12,8 +12,6 @@ function PortfolioGrid(props) {
   return (
     <Container>
       <GridContainer id="portfolioGrid">
-        {console.log(projects)}
-
         {projects.map(function (item, index) {
           ++projectID
           return (

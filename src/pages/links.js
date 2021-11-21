@@ -40,7 +40,11 @@ const linksArray = [
 function links(props) {
   return (
     <Layout>
-      <SEO title="KeelanJon Featured Links" />
+      <SEO
+        title="KeelanJon Featured Links"
+        description="Hi I'm Keelan, a Designer and Front End Developer. 
+        I also like creating 3D illustrations, art and drinking lots of coffee."
+      />
       <LinksPageHeader />
 
       {linksArray.map(function (item, index) {
