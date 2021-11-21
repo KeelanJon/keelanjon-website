@@ -14,8 +14,10 @@ function Contact(props) {
       <div>
         <h2>info@keelsdesign.co.uk</h2>
         <p>
-          I’m available for freelance projects or for hire. Let’s work together
-          on your next project.
+          {/* I’m available for freelance projects or for hire. Let’s work together
+          on your next project. */}
+          I'm available for freelance projects and commisions. Let's work
+          together on your next project.
         </p>
       </div>
       <div>

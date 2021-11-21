@@ -25,7 +25,11 @@ function IndexPage({ data }) {
 
   return (
     <Layout>
-      <SEO title="Designer and Front End Developer" />
+      <SEO
+        title="Designer and Front End Developer"
+        description="Hi I'm Keelan, a Designer and Front End Developer. 
+        I also like creating 3D illustrations, art and drinking lots of coffee."
+      />
       <HeroNew />
       <NewAboutSection />
       <PortfolioGrid projectData={projects} />
