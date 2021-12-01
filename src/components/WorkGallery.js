@@ -6,8 +6,6 @@ import { Link } from "gatsby"
 function WorkGallery(props) {
   const projects = props.projectData
 
-  // console.log(projects)
-
   return (
     <GalleryContainer id="clientWork">
       {projects.map(function (item) {

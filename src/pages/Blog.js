@@ -10,9 +10,7 @@ function Blog() {
     <div>
       <h1>Blog CONTENT</h1>
       <div>Imported Query</div>
-      {console.log(blogData)}
       {blogData.map(function (item, index) {
-        console.log(item)
         return (
           <div>
             <p>{item.frontmatter.title}</p>

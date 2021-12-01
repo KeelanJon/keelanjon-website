@@ -15,7 +15,7 @@ const linksArray = [
     target: "_blank",
   },
   {
-    text: "MetaPeople Character Avatars",
+    text: "MetaPeople Avatar Library",
     url:
       "https://keelanjon.gumroad.com/l/AQsdT?_gl=1*1xpifge*_ga*MTUyMTc3MDk1Ny4xNjI1NjA1NDI5*_ga_6LJN6D94N6*MTYzNzQ4OTc1OS4yMy4xLjE2Mzc0OTAwNjcuMA..&_ga=2.98959645.2064814858.1637485742-1521770957.1625605429",
     target: "_blank",
