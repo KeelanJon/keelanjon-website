@@ -6,7 +6,7 @@ import PageHeader from "../components/PageHeader"
 import Layout from "../components/Layout"
 
 function store(props) {
-  const products = props.data.products
+  // const products = props.data.products
 
   return (
     <Layout>
@@ -16,7 +16,7 @@ function store(props) {
         buttonURL="#products"
         description=""
       />
-      <ProductGallery id="products">
+      {/* <ProductGallery id="products">
         {products.edges.map(function (product) {
           let { productName, productCategory, id, productLink } = product.node
           let productImage = getImage(product.node.productImage)
@@ -36,41 +36,41 @@ function store(props) {
             </ProductCard>
           )
         })}
-      </ProductGallery>
+      </ProductGallery> */}
     </Layout>
   )
 }
 
 export default store
 
-export const query = graphql`
-  query {
-    products: allContentfulStoreProducts {
-      edges {
-        node {
-          id
-          productCategory
-          productName
-          productLink
-          productImage {
-            gatsbyImageData(
-              placeholder: BLURRED
-              formats: [AUTO, WEBP]
-              quality: 100
-            )
-          }
-          productDescription {
-            id
-            childMarkdownRemark {
-              rawMarkdownBody
-              excerpt
-            }
-          }
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query {
+//     products: allContentfulStoreProducts {
+//       edges {
+//         node {
+//           id
+//           productCategory
+//           productName
+//           productLink
+//           productImage {
+//             gatsbyImageData(
+//               placeholder: BLURRED
+//               formats: [AUTO, WEBP]
+//               quality: 100
+//             )
+//           }
+//           productDescription {
+//             id
+//             childMarkdownRemark {
+//               rawMarkdownBody
+//               excerpt
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
 
 const ProductGallery = styled.div`
   display: grid;
