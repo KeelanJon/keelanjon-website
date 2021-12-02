@@ -3,7 +3,6 @@ import styled from "styled-components"
 import FlexBox from "./FlexBox/FlexBox"
 import SocialBar from "./SocialBar"
 import Sphere from "./3DObjects/Sphere"
-import { StaticImage } from "gatsby-plugin-image"
 
 //image imports
 import Line from "../images/line.png"

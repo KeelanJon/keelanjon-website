@@ -1,7 +1,11 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Keelan Jon`,
-    description: `Hi, I'm Keelan. A Design and Developer from Wales.`,
+    description: `Hi I'm Keelan. A Designer and Front End Developer from Wales. I also like creating 3D illustrations, art and drinking lots of coffee.`,
     author: `Keelan Jonathan`,
   },
   plugins: [
@@ -28,6 +32,7 @@ module.exports = {
         path: `${__dirname}/src/blogs`,
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
@@ -72,13 +77,17 @@ module.exports = {
         // Any additional optional fields
         sampleRate: 5,
         siteSpeedSampleRate: 10,
-        cookieDomain: "example.com",
+        cookieDomain: "keelanjon.com",
         // defaults to false
         enableWebVitalsTracking: true,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACEID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
   ],
 }
