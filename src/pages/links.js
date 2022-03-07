@@ -25,11 +25,11 @@ const linksArray = [
     url: "https://www.patreon.com/keelanjon",
     target: "_blank",
   },
-  {
-    text: "NFT Gallery",
-    url: "/oddfolk",
-    target: "_self",
-  },
+  // {
+  //   text: "NFT Gallery",
+  //   url: "/oddfolk",
+  //   target: "_self",
+  // },
   {
     text: "Store",
     url: "https://app.gumroad.com/keelanjon",
