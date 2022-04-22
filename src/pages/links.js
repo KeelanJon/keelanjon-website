@@ -11,7 +11,7 @@ import SEO from "../components/seo"
 const linksArray = [
   {
     text: "Dream Walkers",
-    url: "https://foundation.app/collection/dw-52ae",
+    url: "https://foundation.app/collection/dreamwalkers",
     target: "_blank",
   },
   {
